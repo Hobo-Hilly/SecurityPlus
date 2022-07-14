@@ -48,12 +48,13 @@ Directed email to an executive officer of some sort
 Email based scams
 
 # Spam over Internet messaging (SPIM)
-
+Spam over txt
+spam over email
 
 # Pharming
+This is redirecting the DNS request from the victim to a maliious website
 
-
-# Redirection to a bogus site
+# Redirection to a bogus sit
 
 
 # DNS poisoning
@@ -63,30 +64,26 @@ Email based scams
 
 
 # Watering hole attack
-
-
-# Usually starts with reconnaissance
-
-
-# Determine what website a target group frequent
+Find a popular website that a lot of people that work at the same company go to. Spoof it and harvest credentials
+- Usually starts with reconnaissance
+- Determine what website a target group frequent
 
 
 # Inject malicious code into the website
 
-
-
-
-# Targets get infected as they visit the website
+- Targets get infected as they visit the website
 
 
 # Credential harvesting
-
+Usually comes froma  MTM attack
 
 # Scraping usernames and password from a website clone (Familiarity)
 
 
 # Typo squatting
-
+This is when you accedentally type google incorrectly goooole.com 
+There is no guarantee that you will be redirected to google.com you may be redirected to a look a like
+page assking for your credentials
 
 # URL Hijacking
 
@@ -95,16 +92,16 @@ Email based scams
 
 
 # Dumpster diving
-
+ jump in a dumpster find a calander
 
 # Shoulder surfing
-
+exactly as it sounds
 
 # Tailgating
-
+one person authenticates but two people go through
 
 # Pretexting
-
+A made up story (pretexted story) to use a social engineering attack
 
 # Creating a fabricated scenario
 
