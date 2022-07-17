@@ -68,7 +68,72 @@ A BPA is used AKA Business Partner Agreement
 
 ''
 
+10.  What does the acronym SED denote?
+
+''
+Self Encrypting Drive
+
+''
+
+11. Who has the responsibility to configure access rights in Discressionary Access Control?
+''
+The Data Owner or the Custodian of the Data
+
+''
+
+12. What does the acronym DLP denote?
+''
+Data Loss Prevetion 
+
+''
+
+13. Which services are usually provided by all-in-one security?
+''
+URL Filtering, Content Inspection, Malware inspection.
+
+''
 
 
+14. What is the best protection against of cross site scripting?
+''
+Disable the running of scripts 
+''
 
+15. What does POP denote? 
+''
+Post Office Protocol
+
+'' 
+
+16. What does the acronym RPO denote? 
+
+''
+Recovery Point Objective
+''
+
+17. What is Protected Extensible Authentication Protocol (PEAP)?
+
+''
+A protocol that encapsulates the EAP with in and encrypted and authenticated Transport Layer Security (TLS) tunnel 
+
+''
+
+18. Which application hardening method requires the your Organization periodically checks with application vendor?
+''
+Patch Management 
+
+''
+
+19. What is the purpose os IaaS Infrastructer as a Service in cloud computing?
+''
+It provides computer and server infrastructure, typically through a virtualization environment 
+''
+
+20. What is the difference between TPM and HSM chips?
+''
+Trusted Platform Modules (TPM) chips are part of the motherboard
+
+Hardware Security Module (HSM) chips are part of a PCI card that is mounted in a slot on a motherboard. 
+
+''
 
