@@ -84,6 +84,9 @@ This is a wordlist generator out of HashCat.
 
 Burp Suite
 ''
+Dictionary style Brute forcing. 
+There is a tremendous amount you can do with the Burpsuite Proxy but we only want it for it's Dictionary/Brute Force Style of online password attacks.
+Intruder is also tool that will allow you to manipulate the an API request to your liking and send it through to the server.
 This is an online password cracking proxy.
 You can create custome wordlists or usr common ones you download.
 ''
