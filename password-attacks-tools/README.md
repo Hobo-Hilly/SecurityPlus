@@ -90,3 +90,12 @@ Intruder is also tool that will allow you to manipulate the an API request to yo
 This is an online password cracking proxy.
 You can create custome wordlists or usr common ones you download.
 ''
+
+
+
+
+  Dan Explanation
+  ''
+ basically does a dictionary brute force type of password cracking. Against web applications, so it's a web application proxy. Any requests that are being sent to and from a web application can be intercepted and looked at and modified through burp suite. The word suite let's you know that it has more than one type of functionality and there's something called the intruder. And the intruder will let you set fields and say hey, this word right here. Let me highlight that. Make that a field and there I want you to iterate through this list. So, maybe if you see something like password equals. And you typed in the word password and sent that as a request. You would then be able to stop that, intercept it, say highlight the where you put that word password point it to your dictionary file. And say rifle through that and see if you can get any kind of weird output from it. May be that'll let me know that I was successfully able to get past the authentication so. >> A lot of functionality.
+  
+  ''
