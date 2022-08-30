@@ -1,0 +1,89 @@
+# Talking all about password attack TOOLS today.
+
+Online Attacks
+# What are they?
+''
+Online attacks are typically an attack that is gonna be against some kind of remote login interface.
+
+if an attacker can perform an online attack against that remote RDP session, or the RDP connection in general, then they can gain access
+
+SSH is also a remote login that can be attacked
+
+BlueKeep and DejaBlue are two attacked the RDP protocol.
+
+CONS:
+- Online login attempts are usually limited to a certain amount of tries until a lock out threshold.
+    Which could take a certain amount of time to reset or could require a sys admin to hope into the system and reset the users account
+- Limited Bandwidth. If you are hammering the machine with a online login form you are going to make a ton of noise and you could accidentally Dos login server if the server being attacked has a small/limited amount of bandwidth to work with.
+- Wildly Detectable  
+
+''
+
+Online attacks cover all REMOTE LOGINS 
+
+
+Offline Attacks
+# What are they?
+''
+This is where you attack the password directly. To be clear, this is NOT the same thing as aquiring the passwords to crack. This assumes you have a list of hashes stored on a local disk/drive and you intend to run a tool(or use manual enumeration/ use a self composed tool) against the hashes(passwords) to see if you can get them to crack.
+
+Obtaining the Passwords is a horse of a different color... For the scope of this episode.
+
+CONS:
+- You are limited by the computational power of your machine
+
+PRO:
+- They are impossible to detect. As the passwords are on the attackers local machine/device so since the victim is (should not be) not monitoring the attackers computer offline attacks are impossible to dectect.
+
+
+- They would have to detect you getting the passwords off the machine/device or exfiltrating data after you logged in with the cracked password(s). 
+
+''
+
+Tools
+
+hashcat
+''
+GPU intensive password Cracker
+Offline
+
+''
+
+Hydra
+''
+Online Password Attack System 
+
+''
+
+John the Ripper
+''
+CPU intensive
+Offlines Password Attack System
+
+''
+
+PACK
+''
+what it does is it just kind of analyzes the way people create passwords. This is meant to aid in password cracking it DOES NOT crack passwords.
+
+''
+
+CeWL
+''
+Word list generator. This will crawl a website and help create a dictionary wordlist to use against the websites login form(s).
+
+''
+
+
+Statsprocessor
+''
+This is a wordlist generator out of HashCat.
+
+''
+
+
+Burp Suite
+''
+This is an online password cracking proxy.
+You can create custome wordlists or usr common ones you download.
+''
