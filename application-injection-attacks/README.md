@@ -58,6 +58,23 @@ Extensible markup language (XML) or XXE attack
     Dynamic link library (DLL)
 
 ''
+so DLL. Let's think about how applications work, right? A user interacts with an application and that application has a certain limited amount of functionality built into it. 
+
+It's the way programmers can keep their application footprint small, but then when they need to extend the functionality of the application, they can put that functionality in DLL file in the Dynamic link library so the user interacts with it and that functionality is not built in the application is gonna reach down to the dynamic link library. 
+
+It's gonna grab that DLL, essentially pull it in and now we've got whatever that extended or additional functionality is. 
+
+
+Now think about the attacker. If the attacker can modify the DLL or maybe even supply their own malicious DLL, then when that functionality is called upon, we reach down into the Dynamic link library file and or pull that file out, then what happens is it performs some kind of unauthorized actions.
+
+
+NOTE!!!
+ A lot of your drivers are DLL files too and remember what your drivers do. Your drivers allow that high level programming language. 
+ 
+ The operating system to communicate down at the low level with the hardware and that is a very trusted process.
+ 
+ Typically that's an interaction between the kernel and the hardware itself, and if that user can inject that DLL at that level, they've got privilege escalation and they essentially can take control. Really, if they want of the entire machine, if that's what they so choose to.
+
 -  anybody who is running any kind of Windows Active Directory should be familiar with DLL
 
 -  We've got some kind of web application, that web server, right? We're interacting with that web API. And maybe it does something where it generates an LDAP query against the directory services, says hey, I just wanna validate. Does that user actually exist, right? 
@@ -81,7 +98,7 @@ XML (Extensible Markup Language)
 
 
 ''
-And that attacker is gonna send a request towards an application, typically in the form of an XML type structure.
+The attacker is gonna send a request towards an application, typically in the form of an XML type structure.
 
 And if that attacker knows that that application is calling that XML request at external entity and pulling that information in that's been parsed. 
 
@@ -104,6 +121,21 @@ HACKER ------------>   *  Application    *  --------------->   #   XML Parser   
 
 
 
+OS (Operating System)Command Injection
+
+- Inject commands into the web app that are then executed by the OS.
+
+command injection, let's talk about some kind of vulnerable web application. 
+Just a Vulnerable application in general and you've got a field right? 
+
+And let's say it's some kind of music player, right? And you want to view your list and that list is stored on a back end server somewhere, right? So you send or the attacker sends that action to the application and notice it says hey just display my playlist. 
+
+But notice that there's a semi colon in there and outside of that semi colon is the same command that we kind of seen in one of the previous slides, right? Says cat, right show me Etsy password. ($ /etc/passwd)
+
+Well the application says sure, I'll absolutely retrieve your playlist. I'll send it back to you. Here's which playlist looks like. And by the way, I'll go ahead and dump Etsy password there and you're gonna be basically having access the again, the entire user database.
+
+NOTE:
+ Now I think it's important to point out why this actually happens, and that's because the web application is reaching into the operating system. Whoever coded it is saying, hey, I need this functionality. The operating system can do that, so I'll just have it do that for me, and then it didn't protect that. So as an end user, when I give it some input, if I'm able to chain commands together like you can in a Linux system using semi colons, that also works with windows as well. Then it will not only run the first command it will run the second command and the 3rd and the 4th or however many you chain together. If it accepts those characters and the operating system will do it and then dump it right back out
 
 
 
@@ -111,10 +143,3 @@ HACKER ------------>   *  Application    *  --------------->   #   XML Parser   
 
 
 
-
-
-
-Command Injection
-
-
-Inject commands into the web app that are then executed by the OS.
