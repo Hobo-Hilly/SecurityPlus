@@ -37,25 +37,46 @@ And then that back end SQL server returns the information back, presents it to t
 
 All right, now, if the attacker can do this same thing, then what the attacker can do is make a modification to the information that they're putting within the fields on the Web API. (BURPSUITE) And do that for the purposes of maybe seeing if, I guess, they try to identify if this can happen at all. And add a little information to that field that actually does perform some kind of SQL query. And it sends that Web API since it's already talking to the back end server, is gonna say, okay, well that's a SQL query. That's usually what I do. So I'll go ahead and I'll send that back to the SQL server. 
 
-And then, that query happens and then whatever of those undesired actions might be. The SQL server happily accepts it because that's its whole reason for living. Right, I get a SQL query, I look at the database, I generate that output and I send it back to you. Again, for the purposes of the manipulation of the information, modification of the information, exfiltration of the information, or just bringing the server offline. That's essentially what the SQL injection attack is doing
+And then, that query happens and then whatever of those undesired actions might be. The SQL server happily accepts it because that's its whole reason for living. Right, I get a SQL query, I look at the database, I generate that output and I send it back to you. Again, for the purposes of the manipulation of the information, modification of the information, exfiltration of the information, or just bringing the server offline. That's essentially what the SQL injection attack is doing.
 
 # What is it doing? Whats going on?
 
-Well, I am injecting into the SQL query, I am adding more SQL. And if I can actually inject into that query, where I can modify what's going on and therefore, just like a database admin would be if they were sitting behind the hood of that database server, 
+Well, I am injecting into the SQL query, I am adding more SQL. And if I can actually inject into that query, And I can modify what's going on, just like a database admin would be if they were sitting behind the hood of that database server, 
 ''
 
 
 
-Lightweight directory access protocol (LDAP)
-
+    Lightweight directory access protocol (LDAP)
+''
 - lightweight directory access protocol, that is how we query against directory service servers. 
 
 Extensible markup language (XML) or XXE attack
 
--  
+# XML external entity injection (also known as XXE) is a web security vulnerability that allows an attacker to interfere with an application's processing of XML 
+''
 
-Dynamic link library (DLL)
+    Dynamic link library (DLL)
 
+''
+-  anybody who is running any kind of Windows Active Directory should be familiar with DLL
+
+-  We've got some kind of web application, that web server, right? We're interacting with that web API. And maybe it does something where it generates an LDAP query against the directory services, says hey, I just wanna validate. Does that user actually exist, right? 
+
+And then the LDAP server verifies that and the web application allows them to perform whatever action it is that they're trying to perform. Now if the attacker can sit in that same spot just like the SQL injection attack, if they can modify the entry in that field and add something that would construct an LDAP query against that LDAP server. Then they could potentially get more information than what they should have access to.
+
+# Whats Going on?
+
+ How to Imagine Dynamic Link Library (DLL). I think of it as like a database of all the objects in your network. 
+ 
+ Yeah, when I started learning about LDAP and doing queries against those things, it was basically presented as a phone book of information for that domain, right? So I've got peoples names, email addresses, phone numbers, what room there in the building. What department there with? 
+ 
+ >> Machines on your network? >> There are all these attributes that go along with any account or table row in a table of information. So when you open up an Active Directory server and right click on a user and we say give me the properties and it shows me all that information. 
+ 
+ >> That's coming from that LDAP directory. And, it can be used in more than Active Directory. It can be used in web applications. So now we're just taking that SQL injection idea and going, I've seen this song before, I've heard this song before. Let's just add LDAP instead of SQL, and we're good to go. 
+ 
+ >> That's right, we could format in the structure that LDAP is expecting. It's gonna say, hey, that's the web app talking to me. There's already trust relationship between that web API, which we don't typically interact with, right? That's under the hood. It's kind of abstracted to us, but essentially, you're attacking that web API(Application Programming Interface), and it's really only doing its job. It's doing exactly what we expected it to do, but now the attackers making it do exactly what they expect it to do.
+
+''
 
 Command Injection
 
