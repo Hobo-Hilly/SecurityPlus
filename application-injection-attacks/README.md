@@ -137,9 +137,8 @@ Well the application says sure, I'll absolutely retrieve your playlist. I'll sen
 NOTE:
  Now I think it's important to point out why this actually happens, and that's because the web application is reaching into the operating system. Whoever coded it is saying, hey, I need this functionality. The operating system can do that, so I'll just have it do that for me, and then it didn't protect that. So as an end user, when I give it some input, if I'm able to chain commands together like you can in a Linux system using semi colons, that also works with windows as well. Then it will not only run the first command it will run the second command and the 3rd and the 4th or however many you chain together. If it accepts those characters and the operating system will do it and then dump it right back out
 
+# How is this working?
+''
+So, we're getting the entire database by bypassing that using some logic saying, hey, give me admin, which doesn't exist, or 1 = 1, if 1 = 1 then give me everything. >> It's true, then that means everything, it's always true, so it's just gonna dump everything back out.
 
-
-
-
-
-
+''
