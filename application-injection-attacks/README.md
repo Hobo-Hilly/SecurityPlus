@@ -75,8 +75,42 @@ And then the LDAP server verifies that and the web application allows them to pe
  >> That's coming from that LDAP directory. And, it can be used in more than Active Directory. It can be used in web applications. So now we're just taking that SQL injection idea and going, I've seen this song before, I've heard this song before. Let's just add LDAP instead of SQL, and we're good to go. 
  
  >> That's right, we could format in the structure that LDAP is expecting. It's gonna say, hey, that's the web app talking to me. There's already trust relationship between that web API, which we don't typically interact with, right? That's under the hood. It's kind of abstracted to us, but essentially, you're attacking that web API(Application Programming Interface), and it's really only doing its job. It's doing exactly what we expected it to do, but now the attackers making it do exactly what they expect it to do.
+''
+
+XML (Extensible Markup Language)
+
 
 ''
+And that attacker is gonna send a request towards an application, typically in the form of an XML type structure.
+
+And if that attacker knows that that application is calling that XML request at external entity and pulling that information in that's been parsed. 
+
+Then the attacker can essentially modify that request to perform some kind of action, and that's gonna be pulled in by the XML parser. The XML parser, it's just doing its job. And it says, okay,I'll parse that out and I'm gonna also perform the action that's been crafted in the XML coming from the attacker and we're going to end up dumping etc password.
+                       * * * * * * * * * *                     # # # # # # # # # # # 
+                       *                 *                     #                   #
+                       *                 *                     #                   #
+                       *                 *                     #                   #
+HACKER ------------>   *  Application    *  --------------->   #   XML Parser      #
+        XML Request    *                 *                     #                   #
+                       *                 *                     #                   #
+                       *                 *                     #                   #
+                       * * * * * * * * * *                     # # # # # # # # # # # 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Command Injection
 
