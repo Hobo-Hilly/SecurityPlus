@@ -95,10 +95,12 @@ HACKER ------------>   *  Application    *  --------------->   #   XML Parser   
                        *                 *                     #                   #
                        *                 *                     #                   #
                        * * * * * * * * * *                     # # # # # # # # # # # 
-
-
-
-
+                                                                         |   
+                                                                         |
+                                                                         |
+                                                                         |
+                                                                         |
+                                                                         > $ cat /etc/passswd  (This is the execution of the command that was sent in the mal formed XML Request. You could put any command you want right there.)
 
 
 
