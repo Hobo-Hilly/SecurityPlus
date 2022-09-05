@@ -93,3 +93,22 @@ EX:
 
 
 Demo WHOIS protections on ITPro.TV or Facebook.com
+
+# Another client side attack vector
+ our DNS server consoled pulled up our DNS server console that's pulled up right here. You can see that this is what's known as a zone file. Notice my computer here. This is actually the IP address to the computer we were just looking at. Now you can also see the IP address right here. 
+ 
+- This is the IP address to the domain controller that's also running DNS as well. It's gotten integrated DNS zone. Now if somebody could come in here, create a new name and we call that name. Let's say Server 01. And we put a bogus IP address in, and I add the host. 
+ 
+- Notice that it says the add the host record was added successfully. Now this if this was a malicious entry when I ask for SRV 01, my DNS server would say sure I got it right here. Here's that information back to you. That right there would be how the poison attack would work. 
+ 
+- One last thing I want to show you. Anothher kind of DNS name resolution based thing that might happen to you. The host file and the host file is down in Windows System 32 drivers ETC. And this host file contains static mappings of ip addreses to servers you need to connect to on the Internet.If an attacker can manipulate the host file,  The machine wont even ask the DNS server 'cause the host file is still checked. Today, however, I will tell you for protections in web browsers. 
+
+- A lot of times your web browsers they ignore this because of that very fact. So I also want you to know that there's some static mapping that could potentially happen on your computer that could also be some type of attack vector for these attackers and thread actors all right. 
+
+
+
+
+
+
+
+
