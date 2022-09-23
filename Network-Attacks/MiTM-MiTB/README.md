@@ -31,3 +31,9 @@ Start Wireshark
 Connect with SSH
 
 Stop Wireshark and view encrypted information
+
+
+# Summary 
+''
+so when it comes to man in the middle attacks,  protect yourself by using secure protocols to help bring risk down to an acceptable level
+''
