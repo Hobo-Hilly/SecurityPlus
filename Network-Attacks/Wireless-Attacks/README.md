@@ -88,8 +88,28 @@ Near-field communication (NFC)
 - You can use it for electronic identification things like a ticketing systems, and public transportation based systems. Peer-to-peer data transfers, device pairing, and customer loyalty programs.
 - RFID attack vectors  Eavesdropping, Data modification or Theft, and a relay attack.
 
+# EX:
+- They put what's known as an NFC mole close to the victims phone.(probably another phone) 
+-  So if I just dropped my malicious cell phone right here(close to the victim). And it starts talking to that phone that can then maliciously read that information. 
+- We've got card emulation going on by the attacker, who can then talk to the legitimate card reader. And notice, that's why they call it a relay attack. Because the victims phone isn't in the centimeters that near-field communication needs.
+
+# Summary
+So, again, they're putting a malicious reader close to the victims card, and when it thinks that it's actually doing this legitimate reading, the attackers scraping that information, using card emulation to talk to the legitimate reader, basically, manipulating the conversation the way they want.
+
+
 Jamming
+''
+- Now, how the heck would a microwave oven knock someone off of their wireless network? >> 2.4 gigahertz range. If they are operating in the same range as that wireless access point, it causes a lot of congestion, causes a lot of interference. And that's one of the problems with the ISM band, the industrial, scientific and medical band. It's been out there for, god, since the early 80s. So, it's heavily used, lot of interference.
+
+- If the attacker can figure out how to do the same thing, and put that signal in between the access point and the client on that access point, they can potentially bring that communication down, blocking communication between authorized clients and the access points, and essentially causing a denial of service attack. So, no service, no communication, can't connect to the wireless network.
+
+''
+# Bluetooth-based attacks, and there's two different types.
+
+Bluejacking, they want your information. Bluesnarfing, I'm gonna give you my information in an unauthorized manner
 
 Bluesnarfing
+Bluesnarfing, I'm gonna give you my information in an unauthorized manner
 
 Bluejacking
+Bluejacking, they want your information.
