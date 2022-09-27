@@ -31,6 +31,7 @@ https://nvd.nist.gov/config/cce
 - identifying the presence of XYZ Visualizer Enterprise Suite could trigger a vulnerability management tool to check the system for known vulnerabilities in the software, and also trigger a configuration management tool to verify that the software is configured securely in accordance with the organization's policies.
 
 NVD Threat Data Feed
+
 Real Time Monitoring
 
 - https://nvd.nist.gov/vuln/data-feeds
