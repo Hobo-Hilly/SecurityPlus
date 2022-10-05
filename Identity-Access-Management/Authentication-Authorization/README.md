@@ -1,7 +1,7 @@
 Authorization and Authentication
 
 
-- Identity
+- Identity: So identification is about establishing who you are
 
 Authentication
 
