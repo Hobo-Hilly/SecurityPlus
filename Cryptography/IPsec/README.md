@@ -75,7 +75,7 @@ You'll notice that we do not have two routers here, right? It's not site to site
 1. Negotiation ( )
 2. IP Sec Protocol (We're going to define what is the IPsec protocol we're going to use, which means do we need the authentication and integrity without encryption? Or do we need authentication integrity, with encryption)
 3. Then once that's done, we're going to define what the encapsulation method is
-4. And then authentication authentication this time is going to be MD5 or SHA
+4. And then authentication, this time is going to be MD5 or SHA
 5. Session Duration( How long should I wait? We're going to define that before we actually set these up, so that once that data communication is done, that security association is tore down.)
 6. Right here's an optional DH exchange Diffie Hellman exchange
 - This is for if you wanted to implement perfect forward secrecy: And what that means is that it's going to rotate. Through keys for each communication that goes through that tunnel
@@ -89,7 +89,7 @@ AH
 - Does not offer encryption 
 - Uses IP Protocol 51
 
-ESP
+ESP (Encapsulated Security Payload)
 This is what is actually going to encrypt that information as it makes its way again across that IPsec tunnel
 - Encapsulating Security Payload
 - Offers Authentication/ Integrity and Encryption
@@ -104,7 +104,7 @@ Transport Mode vs Tunnel Mode
 IP Header   |    TCP/UDP   |  Payload
 
 
-*** ESP Transport Mode
+*** ESP Transport Mode 
 
 Original Header | ESP |  TCP/UDP |  Original Payload | ESP
 

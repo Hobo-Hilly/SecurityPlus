@@ -1,3 +1,11 @@
+IAAA
+- Identity = Who are you?
+- Authentication = prove it
+- Authorization = What can you do?
+- Accounting = What did you do?
+
+
+
 Authorization and Authentication
 
 
@@ -45,11 +53,36 @@ Authorization Factors (Somewhere you are)
 
 
 -Accounting
+What have you done?
+
+Event logs
+
+Security Logs
+
+Audit logs
+
 
 Account Management - Password Keys
+- YubiKey (external)
+- Mobile Devices (external)
+- Biometrics (internal)
+- FIDO U2F, UAF, CTAP and FIDO2
 
-Account Management - Password Vaults
+FIDO = Fido is Fast Identity Online
+- It's a set of open standards, if you will, that allows you a fast log-on experience across websites and applications
+These are some of the standards below
 
+U2F = Universal Second Factor
+
+UAF = Universal Authentication Framework
+
+CTAP = CTAP Is another one out there that's part of the W three C's web auth and FIDO2 combine
+
+
+Authentication Management - Password Vaults
+                            Online Banking
+                            Shcool login
+                            online email
 Account Management - TPMs
 
 Account Management - HSMs
