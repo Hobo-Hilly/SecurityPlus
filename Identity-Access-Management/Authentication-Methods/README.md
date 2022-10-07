@@ -48,8 +48,80 @@ Security Assertion Markup Language SAML
 
 SSO Single SignOn
 
-EX: An example when I log into gmail,I can turn around and go to any other portion of the G suite, whether it's google docs, right, and some of the other options that they have and I don't have to reenter my credentials. That's essentially what Single sign-on is.
-
+EX: An example is when we log into gmail, we can turn around and go to any other portion of the G suite, whether it's google docs, and some of the other options that they have and we don't have to reenter our credentials. That's essentially what Single sign-on is.
 
 
 Attestation
+
+when this computer boots up, what it does is it takes that configuration state. And it's gonna wrap that up into a file and it says, here's how I'm configured right now, and it takes that message and it sends it out to an attestation server. The attestation server says, all right. I see the configuration, let's say Dan's the security administrator.
+
+ Dan says, I want this security baseline. All of the client computers on my network have to boot up and be configured like this, that's the policy. The attestation server looks at the configuration state and says, what's the security policy here? And let's do a comparison Don's policy says, it should be configured this way, client computers saying this is what I have, if they are in agreement and guess what? You gain access to the resources, inside of the corporate network, all right. However, if that same process happens and what is expected or required by the policy is not what we see inside the configuration state, you're not going to get access into the network.
+
+ - You may be kicked down to a remediation network which will auto config your computer to the appropriate settings and send you back to the main network and you have full access.
+
+ - You could get locked out 
+
+ # Additional Authentication Methods
+
+Tokens
+
+# What is it?
+- Tokens are essentially an electronic component, that authenticates identities
+- It can electronically store information. It doesn't have to. 
+- It may be with or with out a password 
+
+Token Types
+- Connected
+Requires a physical connection to the system 
+EX: Yubikey, FIDO (Fast Id Online), Smart Card
+
+
+- Disconnected
+No physical connection required
+EX: Authenticator Apps, RSA(Fob), Secure ID,
+
+
+- Contactless (NFC Near Field Communication)
+No physical connection
+EX: Apple Pay, Google Pay, Apple Pay 
+its a contactless token
+
+
+OTPs
+HMAC based One Time Password
+
+Hashed Message Authentication Code One Time Password
+HTOP
+# How does it work?
+
+- There are two components Secret Key and a counter. They are combined and then ran through the HMAC hashing process.
+- The result (usually looking like 2467456) is the One Time Password
+- The Secret Key is a Random Number
+- Counters NEVER expire. They Only expire once you use them
+- Secret Key(AKA Seed)      +        Counter   = $Result
+
+FYI: There is a problem with them. Cuz they only expire on use. If i can gain access to a system that Dan's using that has the pregenerated HMAC-based OTP's then i can use them. They're very susceptible to replay attacks
+
+
+$Result    +     HMAC(hashing process)   =    2468731(The digits that make up a One Time Password)
+
+
+
+TOTP
+
+- This is a time based method
+- Used the Secret Key(Random Number)    +     TIMER(This is in place of the counter)  =  $Result2
+
+$Result2   +   HMAC(Hashing Process)     =     Timed Based One Time Authentication (Code)
+
+- A token does not have to contain a password 
+
+An RSA secure id is a Token that contains a One Time Password 
+
+Discussion points
+
+Delivery Mechanisms
+Authentication applications
+SMS or phone call
+Push notifications
+Smart card authentication
