@@ -138,17 +138,66 @@ EX:
 * * * * * * * * * * * * 
 
 
+FYI: By default, all firewalls, basically any traffic that isn't explicitly allowed on the reservation list is automatically dropped. The implicit deny, that's how firewalls work. All outbound traffic typically is allowed by default. Those are the pre-defined roles in the default nature of a firewall.
 
-
-
+FYI: Yeah, and you gotta be careful with rule-based, because the rule order can come into play as well. You put the rules in the wrong order, and things don't work right, and it just gets weird. Take his ICMP versus the gateway. If I say, all traffic from this network is allowed, and then you also have, ICMP is not allowed? If I put those in the wrong order, even if it comes from that network, it'll still be disallowed. There's your problem, right, so be careful with those
 
 
 Attribute-based access control (ABAC)
 
+# How does it work?
+EX: 
+
+User Attributes                                         Resource Attributes
+- Name                                                  - Name
+- Department                                            - Type
+- Position                                              - Modification Time
+- Building Number
+- Time Zone
+
+Well, you can gain access to this resource if you're in this building, if you're sitting at this desk. And what I mean by that, you're sitting at your work desk, you can gain access to it. But if you're on the public kiosk, I don't care if your user identity still says you're an authorized user, you're not in the right location, that could lead us to risk
+
+- Attribute-based access control, a lot of times, or the majority of the time, is based on things like user attributes.
+
 
 
 Conditional Access
+- Conditions are a little bit different. These are pre-defined conditions, and examples of this are things, again, like location, you are here.
+- Previously defined conditions
+Examples
+- Location
+- Conditional access, again, and that really, I know, can blur the line on, hey, you're at this public kiosk, let's take it a little bit different, all right? You're within the corporate network, you can gain access to this resource with maybe a little bit less restrictions. But you're now at the coffee shop, and you to go in to access the information over a public network. Again, I don't care about your identity here, your location is telling me that you shouldn't have access to this. Because we can't really restrict and really protect that information when it's on the other side of our internal LAN. 
 
-Privilege access management
+- Operating System
+ So you wouldn't want a random Kali linux OS running around on the network
+
+- Devices
+ You can access the resources from a computer but not from a phone/tablet... or any variation of this idea
+
+- IP Addresses
+
+- Subnets
+
+# Summary
+- Some of these could end up controlling access based on these type of examples. 
+
+
+Privilege Access Management (PAM)
+- This is for controlling and monitoring the user accounts we have in the directory
+- User with high-level permissions
+    Users with high-level permissions. We wanna know, who are the administrators on our network, and did an administrator create one of these backdoor-type accounts, and now are accessing it through a backdoor account? From the perspective of a system, that's an administrator accessing it. Should they have access, should they not have access, who created the account
+- So we know how many Admins how many managers etc ..are on the network and what their permissions are
+
+- How the permissions are used
+    Did an administrator not only have access to something, but did they give another employee full control over something that they shouldn't have access to
+
+- Comprehensive Auditing
+    Internal user activity
+    External Vendor Activity
+
+Comprehensive auditing as well, internal user activity as well, things like external vendor activity. We always wanna be able to monitor that, and this helps us to restrict access within any kind of existing organization. And it helps us to isolate the use of privileged accounts, and if they are being used, how are they being used, right? And that helps to mitigate the vulnerabilities,unauthorized privilege access. 
+
 
 PAM Solutions
+
+https://expertinsights.com/insights/the-top-10-privileged-access-management-pam-solutions/
