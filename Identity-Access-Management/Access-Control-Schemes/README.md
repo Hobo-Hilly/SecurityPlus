@@ -106,8 +106,46 @@ EX:
 
 Rule-based access control (RBAC)
 
+# How does it work?
+EX:
+- First of all, it's predefined criteria. That's what a rule means. Dan says, Hey, I want maybe this traffic coming from Maybe this subnet. All right, maybe it's a branch office and we've got that predefined IP range that says, yeah, if you're in that range, you can make your way into the network. So we set that role on the router. 
+
+- And the router says, okay, I see all of this access coming in. We got some coming in from the internet. We got some coming from the branch office. And then we also got these crazy ICMP echo requests. Another rule says what type of traffic do I want to allow not just the location, right? That's the rule that we've determined but also what kinda maybe traffic specific traffic type do we wanna allow in so in this case, The, the traffic that's coming from the branch office. Yeah, you can gain access to the corporate network. 
+
+- But if it's just any what I call random traffic that's coming in off the internet or maybe some of this type of traffic like ICMP echo requests. When that traffic comes in, the router inspects that criteria and says, Well wait, wait a second. We don't want to allow people to ping us and receive a ping back. So we drop that traffic and we don't allow it to come come through. So that is your rule based access control and don't get those acronyms. 
+
+* * * * * * *                                                                                     - - - - - - - - - - - - - - - - - - - - 
+* Public    *                                                                                     -
+* Internet  * - - - - - -                                                                        -
+* * * * * * *             -                                                                        -
+                            -                                                                      -
+                              -                                                                    -
+                                -                                                                 -
+                                  -                                                                -    INTERNAL CORPORATE
+- - - - - - - - - -                 -                                                              -
+- IP Range        -                   --->  # # # # # # # # #                                     -          NETWORK
+- 10.10.0.0/24    - - - - - - - - - ------> # Company's     #                                     -
+-                 -                         # Edge Router   # = = = = = = = = = = = = = = = = = > - 
+- Branch Office   -                      -->#               #                                     -                                   
+- - - - - - - - - -                    -    # # # # # # # # #                                     - 
+                                     -                                                            -
+                                   -                                                              -
+                                 -                                                                -
+                               -                                                                  -
+* * * * * * * * * * * *      -                                                                    - - - - - - - - - - - - - - - - - - - - 
+* "Rando Traffic"     *    -
+* ICMP Echo Requests  *  - 
+* * * * * * * * * * * * 
+
+
+
+
+
+
 
 Attribute-based access control (ABAC)
+
+
 
 Conditional Access
 
