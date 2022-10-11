@@ -132,13 +132,21 @@ Basically, when the operating system launches, it needs to figure out, how do I 
 - Principal of Least Privilege
     Admins -  admins can modify the registry. So pay attention!
     Standard users - If you have standard users. They don't need that level of privilege. Don't give them that level of privilege. 
-
+Can be found in C:\Windows\System32\Configuration
 
 Hardening Guides
 
+kit
 
+FYI: Your vendors will typically have some kind of best practices, or some kind of Configuration Guide
 
 Microsoft Security Compliance Toolkit
+
+- Windows here they have the Microsoft security compliance tool
+
+# How does it work?
+What is your current Group Policy inside of your Active Directory domain? Well, we can run this toolkit against it and it can compare it. And it can say, okay well, we see these five settings or ten settings, whatever. And we think that you might do better if you configure them this way.
+
 
 
 
