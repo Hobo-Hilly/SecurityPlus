@@ -45,7 +45,10 @@ Incineration
 - Complete destruction of all media components
 - We are liquifing the data
 - You can have a company do this for you
+- 'Certificate of Destrcution' can be used in court
 
+Third Party services to destroy data
+- Guardian Data Desteruction 
 
 
 
