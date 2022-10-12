@@ -90,4 +90,21 @@ Global Navigation Satellite Systems
 
 These are some of the various standards when it comes to the global positioning system. And it is a form of a mobile device communication, or connection.
 
-RFID
+RFID ( Radio Frequency Identifier)
+- Uses Electromagnetic fields
+- Identify and track tags
+- Tags attached to objects
+- Tag types
+    Passive tags = powered by RFID reader
+    Actice tags = battery powered
+
+Security Concerns 
+Eavesdropping
+
+Data leaks
+
+Replay attacks
+
+Spoofing attacks
+
+Unauthorized 
