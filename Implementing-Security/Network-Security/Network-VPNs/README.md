@@ -1,3 +1,7 @@
+# FYI: Understand, the tunneling by itself doesn't really protect your information, right? We don't just bring up a tunneling, we use a tunnel protocol to create that logical connection, but that tunnel is brought up and then we encrypt the information. Information that's leaving the branch office, heading to the headquarters or vice versa is then encrypted and it's the routers that actually have to do this. 
+
+
+
 Network Security and VPN's
 Virtual Private Networks: Used to make secure connections over insecure networks
 
@@ -124,9 +128,78 @@ A lot of employees at your company that maybe they are connecting back into comp
 
 Or even easier, right, admins like this cuz we like to control this, we don't want our users to enter this information. We can create things like profiles, that when the client comes online, it's basically checks, and I say online, when you bring up the VPN, it checks a configuration file and automatically configures the VPN according to the parameters that need to be set. And then we can tunnel that information over the public network.
 
-
+# FYI: Understand, the tunneling by itself doesn't really protect your information, right? We don't just bring up a tunneling, we use a tunnel protocol to create that logical connection, but that tunnel is brought up and then we encrypt the information. Information that's leaving the branch office, heading to the headquarters or vice versa is then encrypted and it's the routers that actually have to do this. 
 
 Site-to-site
+
+FYI: One of the deviations between a remote access VPN is a site-to-site VPN, all right? You might also hear it called router-to-router and you're gonna see why they call that, and most commonly, it's called a site-to-site VPN.
+
+# How does it work?
+ EX:
+
+So let's go ahead and set up our same scenario, right? We've got our headquarters, we've got our public network, but what changes a little bit is now we've got multiple branch locations, multiple remote locations, all right? And what we do is these routers actually bring up the tunnels and connect routed-to-router, if you will. So a little bit different on this one, right? Because now the routers are controlling the communication between the different sites, right? And we bring up the tunnel over the public infrastructure and it allows us to communicate between branch office and headquarters and vice versa.
+
+EX: 
+
+                                                                                            #
+                                                                                            #    HEADQUARTERS
+                                                                                            # SRVR-9  
+                                                                                            # SRVR-1        VoIP-12
+                                                                                            #     SRVR-5
+                                                                                   - - - - - - - -          COM-3 COM-12
+                                                                                   - Edge Router -        COM-9 VoIP-17
+                                                                                   - - - - - - - -  
+                                                                        ==================> # # # # # # # # # # # # # # # # # # # 
+                                                                       = 
+                                                                     =   
+                                         - - - - - - - - - -        =
+                                       -                     -     =  
+                                     -   PUBLIC Network        - ==    
+                      = = = = = => -       Internet              -     
+                    =             -                                 -      
+                  =               -                                  -
+                =                 -                                  -
+              =                   - - - - - - - - - - - - - - - - -  -
+            =                                 ^^
+* * * * * * * * * * *                         ||
+*   BRANCH OFFICE   *                         ||
+* Network 1         *                         ||
+*                   *                         ||   
+* SRVR-7            *                         ||
+*       SRVR-54     *                         ||
+* COM- 18           *                         ||
+*       COM-65      *                         ||
+*                   *                         ||
+                                              ||
+                                              ||
+                                              ||
+                                              ||
+                                              ||
+                                              ||   
+                                    # # # # # # # # # # # 
+                                    #  BRANCH OFFICE    #
+                                    #    Network  2     #               
+                                    #   SRVR-1 /COM-10  #
+                                    #   SRVR-2 /COM-7   #
+                                    #                   #
+=====================================================================================================================================
+KEY
+
+BRANCH OFFICE Network 1 = Hypothetical Network Representing the Branch Office of a company
+BRANCH OFFICE Network 2 = Hypothetical Network Representing the Second Branch Office of the same company 
+PUBLIC Network Internet = Hypothetical Network Representing the Public everyday clear web
+HEADQUARTERS = Hypothetical Network Representing a work network environment
+' =========> ' = Represents communication through a VPN Tunnel from branch office 1
+' =========> ' = Represents communication through a VPN Tunnel from The Public Internet to the Headquarters of CO. 
+   '||'   =  Represents communication through an encrypted VPN Tunnel  from branch office 2
+
+# FYI: Understand, the tunneling by itself doesn't really protect your information, right? We don't just bring up a tunneling, we use a tunnel protocol to create that logical connection, but that tunnel is brought up and then we encrypt the information. Information that's leaving the branch office, heading to the headquarters or vice versa is then encrypted and it's the routers that actually have to do this. 
+
+
+
+
+
+
 
 Always-on
 
