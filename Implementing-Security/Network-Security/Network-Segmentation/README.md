@@ -261,6 +261,138 @@ VLAN #30 = General Resources
 
 VLAN #40 = Company Internal Phone Networking System
 
+# Whats going on?
+
+Let's go back to that concept of broadcast communication. Let's say that some device in VLAN 10 needs to talk to another device in VLAN 10, but it doesn't know where it is, right? So, it sends out a broadcast communication. What is the point of sending all of that information across VLANs when it's already in that initial VLAN? 
+
+So what the switch will do is say, hey, all right, let's do a broadcast communication. It's bound for a device within VLAN 10, we'll just leave it there. And we're not gonna allow the communication between these VLANs.
+
+
+# What if we need to communicate between VLAN's?
+If you want to communicate between VLAN's we would access Layer 3.
+
+If we need that type of functionality, then we can add the routing capabilities. And when somebody in VLAN 10 needs to talk to somebody in VLAN 40, we pass it up the OSI model, the router inspects it, inspects its ACL. And if there is an access control entry and a rule that says, yes you can talk to VLAN 40, in this case, well, communication happens
+
+
+
+                                               * * * * * * * * * * 
+                                               *   ROUTER        *
+                                               *  > - - - - \/   *
+                                               * * * * * * * * * *                    
+                                                ^            |    
+                                                |            |
+                                                |            |
+                                                |            \/ 
+                                    # # # # # # # # # # # # # # # # # # # # # # # 
+                            - - - > #      Managed         Switch               #
+                          -         # # # # # # # # # # # # # # # # # # # # # # #- - - - 
+                        -                                                                -   
+                      -                                                                    -         
+                    - VLAN 10 bound for VLAN 40                                              -
+                  -                                                                             -
+                -                                                            VLAN 10 bound for VLAN 40- - - - - - ->
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * | * * * * * * * *
+ *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -        - - - - - - - - - - - - - -  -    - - -\/- - - - -     *
+ *   - SRVR-15 /  SRVR-2 -           - SRVR-47 / SRVR-12 / SRVR-7  -        -  HTTPS-SRVR1 / MySQL-SRVR1 -    -  PBX-SRVR1  -      *
+ *   -                   -           -                             -        - - - - - - - - - - - - - -  -    -             -      *
+ *   - COM-11 / COM-2    -           -  COM-16 / COM-29            -              VLAN 30                     -  VoIP-Phone#-      *
+ *   - COM-14 / COM-4    -           -  COM-19 / COM-25            -                                          -  VoIP-Phone#-      *
+ *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -                                          - - - - - - - -      *
+ *        VLAN  10                             VLAN 20                                                           VLAN 40           *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+VLAN #10 = Accounting
+
+VLAN #20 = Developers
+
+VLAN #30 = General Resources
+
+VLAN #40 = Company Internal Phone Networking System
+
+# Summary 
+
+I want you to look at the each little port panel, if you will, a blade within this switch, if you will. Notice that there's four boxes. Now, in reality, a lot of times you'll see the different colors here. In reality, a lot of times what that means is that you'll have a certain series of ports that might be a gigabit interface or might be a ten gigabit interface if it's a higher end switch. But, imagine, each one of those ports, those individual boxes being their own group, and they cannot communicate amongst each other, unless we add that Layer 3 routing.
+
+
+
+
 Intranets
+# What is it?
+
+What is an intranet, right? The intranet is, essentially, a bunch of local area networks all connected together to form this big worldwide grouping of networks
+
+FYI: But it's public access, right? Now, I say public access, you still have to go through an ISP, you don't just get to wake up one day and say, hey, I'm gonna connect to the Internet, but that's controlled through your ISP
+
+# How does it work?
+Now, you might wanna use all of those same technologies, just like the Internet, but you wanna keep those resources internal to your own network, right? We don't wanna give public access
+
+EX:
+                                                        * * * * * * *
+                                                        * Public    *
+                                                        *  Network  *
+                                                        * Internet  * 
+                                                        * * * * * * *            
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                            -                                                                     -
+                            -                Managed                          Switch              - 
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -            
+                                        
+                                        INTRANET
+
+
+LAN Segment#1                           LAN Segment#2                               LAN Segment#3
+SRVR-5    COM-44                         HTTPS-SRVR                                  SRVR-78  COM-1
+SRVR-9    COM-77                                                                     SRVR-98  COM-36
+COM-2     COM-7                           MySQL-SRVR                                  SRVR-41  COM-69
+                                                                                  
+
+
+
+
+
+
+
+
+
+
+
+Well, we ended up just dividing it up into segments, right? And each one of these segments can communicate no different, and all of that internal communication using all of the technologies that the intranet gives you, right? Again, an intranet allows public access, or behind your corporate LAN environment, right? That forms your intranet, it's internal. So, that's the intranet itself. All right, but it doesn't allow public access outside of that boundary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Extranets
 East-west traffic and Zero Trust
