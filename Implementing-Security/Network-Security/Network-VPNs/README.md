@@ -196,8 +196,9 @@ HEADQUARTERS = Hypothetical Network Representing a work network environment
 # FYI: Understand, the tunneling by itself doesn't really protect your information, right? We don't just bring up a tunneling, we use a tunnel protocol to create that logical connection, but that tunnel is brought up and then we encrypt the information. Information that's leaving the branch office, heading to the headquarters or vice versa is then encrypted and it's the routers that actually have to do this. 
 
 
+# Constraints?
 
-
+So one of the limitations to this can be is the fact that how many of those simultaneous connections can your router participate in, right? They used to have, and they're still out there, I say used to have but they're still out there, for instance, Cisco has their VPN concentrators. If you ever hear that term, that's a term that literally has an aggregation board, a lot of processors. And what it can do is it can handle the encryption and decryption, so basically allowing you to scale up a little bit more.
 
 
 
@@ -205,7 +206,39 @@ Always-on
 
 Split tunnel
 
+
 Full tunnel
+
+- A full tunnel. When you bring up that VPN tunnel, every access request, every resource request goes through that tunnel
+                                                         
+                                                         -                       -
+                     |HOTEL|                             -    not-work.com       -                   |HEADQUARTERS|
+                     |Network|                           -                       -                  |Internal Network/Resources|
+                                                         -                       -                    |srvr-1  srvr-3|
+                                                         -   |PUBLIC Network|    -                   |com-2  com-9 VoIP-2|
+                                                         -    |(Internet)|       -
+                      |COFFEE SHOP|           #ROUTER#   -                       -  #ROUTER#     
+(VPN Client)           |Network|                         -                       -
+(End User)                                               - - - - - - - - - - - - -     
+
+                        |HOME|
+                       |Network|
+========================================================================================================================================
+KEY
+not-work.com = any website that is NOT work related. (Has nothing to do with accessing resources in the HEADQUARTERS)
+
+
+
+In the diagram above ...
+Think about if you need to make a connection to something like, not-work.com. Which has nothing to do with accessing the resources within HEADQUARTERS.
+So, it wouldn't make sense to allow the communication to go all the way through the tunnel to the gateway router, right? And then back out, if you will, to whatever that public resource is.
+So what we do is instead of allowing that, we create a split-tunnel, two tunnels
+There's really just that one tunnel. But now what we're doing is you are scrutinizing with in the one tunnel
+# How does it work?
+EX:
+I'm throwing out a resource here, right? It is a secure FTP server within the headquarters. Well, I want that information going over the tunnel, but if it's not-work.tv, I wanna let, just go ahead and go out there, right? We don't need to encrypt that information. We don't need to keep that information secure
+
+
 
 VPN Tunneling Protocols
 
