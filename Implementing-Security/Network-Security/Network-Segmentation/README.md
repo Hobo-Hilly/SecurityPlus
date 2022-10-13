@@ -386,7 +386,11 @@ So, how do we protect North-South traffic? Well we've seen this, we do this with
 
 
 
- East-West traffic, what do we do? We have VLANs, we have subnets. We have host based intrusion prevention systems ACLs, right?
+- East-West traffic, what do we do? We have VLANs, we have subnets. We have host based intrusion prevention systems ACLs, right?
 
 
-What today we typically say is, we no longer wanna say that everything in our internal network should just be implied trust.
+- What today we typically say is, we no longer wanna say that everything in our internal network should just be implied trust.
+
+- We don't just assume anymore that inside of our lands, behind our firewalls, behind our routers, assume that everything in our land is going to be safe and secure. Those assumptions will bring your networks down. That could lead to some kind of attack, if you will. And that's the zero trust model that you might hear about, it means basically trust nobody
+
+- East-West traffic also talking about, hey, if I've got a data center, this is the communications that happens within my data center. And that North-South what is leaving and entering the data center, outside of our protected boundary.
