@@ -268,12 +268,15 @@ PPTP (Point to Point Tunneling Protocol) PORT# 1723
 Encryption standard: Microsoft Point-to-Point Encryption (WEAK sauce)
 
 
-L2TP (Layer Two Tunneling Protocol)
+L2TP (Layer Two Tunneling Protocol) PORT# 701
 - Widely supported
 - Strong security
 - Its has Complex Firewall blocking
 - Because it uses MULTIPLE ports you could have some issues
 Encryption standard: IPSec AES Advanced Encryption Standard / Certificates (STRONG like Bull)
+*** Anything that's using IPSec is gonna use UDP Port 500 and UDP Port 4500 as well ***
+
+
 
 SSTP (Secure Socket Transport Protocol)
 - Allows Firewall traversal
@@ -289,7 +292,9 @@ IKEv2 (Internet Key Exchange Version 2)
 - So Microsoft has their always-on tight VPN communication, the VPN triggering. So think about a mobile device that hops between wireless networks, right? IKE version 2 is really one that it supports that. In fact, you might even call it or hear it called by it's an abbreviated name instead of mobility IKE or mobile IKE, they call it MobIKE
 - LIMITED support
 - You could expierence Firewall issues with it blocking this form of communication
-Encryption standard: AES Advanced Encryption Standard / Certificates (STRONG like Bull)
+Encryption standard: IPSec AES Advanced Encryption Standard / Certificates (STRONG like Bull)
+*** Anything that's using IPSec is gonna use UDP Port 500 and UDP Port 4500 as well ***
+
 
 FYI: SSL 3.0 and anything below that too is pretty much being just phased out and has been phased out in favor of things like TLS, Transport Layer Security, where you get that certificate based on mutual authentication.
 
