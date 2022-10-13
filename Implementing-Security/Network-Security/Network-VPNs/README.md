@@ -204,6 +204,12 @@ So one of the limitations to this can be is the fact that how many of those simu
 
 Always-on
 
+
+# Full Tunnel vs. Split Tunnel
+Full-tunnel is everything's going through the tunnel. And we can say, nope, sorry, you can't connect to anything else.
+Split-tunnel, allows corporate resources to maintain their encryption and protection, and everything else goes out to the public network.
+
+
 Split tunnel
 
 
@@ -213,16 +219,16 @@ Full tunnel
                                                          
                                                          -                       -
                      |HOTEL|                             -    not-work.com       -                   |HEADQUARTERS|
-                     |Network|                           -                       -                  |Internal Network/Resources|
+                --->  |Network|                          -                       -                  |Internal Network/Resources|
                                                          -                       -                    |srvr-1  srvr-3|
                                                          -   |PUBLIC Network|    -                   |com-2  com-9 VoIP-2|
                                                          -    |(Internet)|       -
                       |COFFEE SHOP|           #ROUTER#   -                       -  #ROUTER#     
-(VPN Client)           |Network|                         -                       -
+(VPN Client) --------> |Network|                         -                       -
 (End User)                                               - - - - - - - - - - - - -     
 
                         |HOME|
-                       |Network|
+                  --->  |Network|
 ========================================================================================================================================
 KEY
 not-work.com = any website that is NOT work related. (Has nothing to do with accessing resources in the HEADQUARTERS)
@@ -239,15 +245,53 @@ EX:
 I'm throwing out a resource here, right? It is a secure FTP server within the headquarters. Well, I want that information going over the tunnel, but if it's not-work.tv, I wanna let, just go ahead and go out there, right? We don't need to encrypt that information. We don't need to keep that information secure
 
 
+# NOT in the slide
+
+ Other thing I also wanna mention, cuz it's not in the diagram, if we have a VPN site-to-site communication, we can do the same thing. We can say, okay, if you're gonna go connect from the branch office back into the headquarters, well, we need you to go through the gateway or the site-to-site, the router. 
+ 
+ But when you're just doing normal communications, I don't want everything going all the way. Let's say we've got a remote office in California and our headquarters is in Florida. I don't want it to have to go over slow WAN links, be encrypted, decrypted, and go all the way into the headquarters to come back out to the Internet, right? So you can also implement a split-tunnel into site-to-site method as well.
+
 
 VPN Tunneling Protocols
+- Creates tunneled communication
+- DOES NOT secure communication
+- MUST be coupled with and ENCRYPTION protocol
+
+FYI: They really only call out one protocol, and that's L2TP
 
 VPN Tunneling Protocols and Encryption
 
-PPTP
+PPTP (Point to Point Tunneling Protocol)
+- Widely supported
+- Very old
+- Weak
+Encryption standard: Microsoft Point-to-Point Encryption (WEAK sauce)
 
-L2TP
 
-SSTP
+L2TP (Layer Two Tunneling Protocol)
+- Widely supported
+- Strong security
+- Its has Complex Firewall blocking
+- Because it uses MULTIPLE ports you could have some issues
+Encryption standard: IPSec AES Advanced Encryption Standard / Certificates (STRONG like Bull)
 
-IKEv2
+SSTP (Secure Socket Transport Protocol)
+- Allows Firewall traversal
+- Only available for windows
+- Not widely adopted
+- Could have proxy issues
+Encryption standard: SSL Secure Socket Layer 3.0 (WEAK sauce)
+
+EX: Think about secure socket when you connect to something HTTPS, right? That's gonna be over Port 443. So this allows you the firewall traversal
+ 
+IKEv2 (Internet Key Exchange Version 2)
+- Has Mobility support
+- So Microsoft has their always-on tight VPN communication, the VPN triggering. So think about a mobile device that hops between wireless networks, right? IKE version 2 is really one that it supports that. In fact, you might even call it or hear it called by it's an abbreviated name instead of mobility IKE or mobile IKE, they call it MobIKE
+- LIMITED support
+- You could expierence Firewall issues with it blocking this form of communication
+Encryption standard: AES Advanced Encryption Standard / Certificates (STRONG like Bull)
+
+
+
+
+
