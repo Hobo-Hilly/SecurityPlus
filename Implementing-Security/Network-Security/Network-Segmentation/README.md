@@ -253,13 +253,13 @@ These computers that are within the VLANs, have the ability to communicate among
  *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -                                          - - - - - - - -      *
  *        VLAN  10                             VLAN 20                                                           VLAN 40           *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Segment #1 = Accounting
+VLAN #10 = Accounting
 
-Segment #2 = Developers
+VLAN #20 = Developers
 
-Segment #3 = General Resources
+VLAN #30 = General Resources
 
-Segment #4 = Company Internal Phone Networking System
+VLAN #40 = Company Internal Phone Networking System
 
 Intranets
 Extranets
