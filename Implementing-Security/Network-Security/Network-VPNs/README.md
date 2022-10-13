@@ -261,7 +261,7 @@ FYI: They really only call out one protocol, and that's L2TP
 
 VPN Tunneling Protocols and Encryption
 
-PPTP (Point to Point Tunneling Protocol)
+PPTP (Point to Point Tunneling Protocol) PORT# 1723
 - Widely supported
 - Very old
 - Weak
@@ -291,7 +291,6 @@ IKEv2 (Internet Key Exchange Version 2)
 - You could expierence Firewall issues with it blocking this form of communication
 Encryption standard: AES Advanced Encryption Standard / Certificates (STRONG like Bull)
 
-
-
+FYI: SSL 3.0 and anything below that too is pretty much being just phased out and has been phased out in favor of things like TLS, Transport Layer Security, where you get that certificate based on mutual authentication.
 
 
