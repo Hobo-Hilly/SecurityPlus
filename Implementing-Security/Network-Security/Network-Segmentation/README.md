@@ -346,53 +346,47 @@ COM-2     COM-7                           MySQL-SRVR                            
                                                                                   
 
 
-
-
-
-
-
-
-
-
-
 Well, we ended up just dividing it up into segments, right? And each one of these segments can communicate no different, and all of that internal communication using all of the technologies that the intranet gives you, right? Again, an intranet allows public access, or behind your corporate LAN environment, right? That forms your intranet, it's internal. So, that's the intranet itself. All right, but it doesn't allow public access outside of that boundary.
 
 
 
+EXTRANET
+
+So, now, the question would be if this is your intranet, what the heck is an extranet? All right, well an extranet is now where we're gonna take in, and some of those WAN links across public networks. 
+
+An example, we've got an intranet #1 here, intranet #2 here. And then we've got our public intranet
+                                                            Encrypted Tunnel
+                      < - - - - - < - - - - Public Network  <- - - - - - - - - - -
+                    -N - - - - - - >           (Internet)  - - ->- - - - - -                                                             
+                  -P     encrypted                                       V   |    ^ 
+                 -V       tunnel                                         P   |    |
+               -                                                         N   |    |
+             ^                                                               |    |
+Intranet #1-                                      Intranet #2               \/    |
+        Router                                                            Router
+    Managed Switch                                                       Managed Switch
+SRVR-1 SRVR-2 SRVR-3                                                    SRVR-1 SRVR-2 SRVR-3
+COM-1 COM-2 COM-3 COM-4                                                COM-1 COM-2 COM-3 COM-4
+
+# Summary
+We create these encrypted secure tunnels over a public network. And what happens is, we allow the communication between these two intranets and collectively, that becomes what's known as your extranet.
+
+# Take away
+So company one, and company two, each have their own intranets. We basically create VPN tunnels over a public network, and the whole entire thing becomes an extranet. So again, intranet, all private, no public WAN links, right? The extranet again, two intranets connected typically, with public connections going over a public network
 
 
 
+Traffic Segmentation
+
+- All right, let me show you what I mean here. So we've got our land. We've got the public network, which essentially is the internet. Well, the North-South traffic, and the East-West traffic. Where does that apply? Well, the North-South traffic is traffic coming into your network, and leaving your network, right? And then we have East-West traffic, that East-West traffic is basically, what's happening inside your land. These are your server to server, client computer to client computer communications.
+
+# How does it work?
+
+So, how do we protect North-South traffic? Well we've seen this, we do this with firewalls, network intrusion prevention systems, DMZs if you will, and a host of other technologies, but these are a lot of the popular ones
 
 
 
+ East-West traffic, what do we do? We have VLANs, we have subnets. We have host based intrusion prevention systems ACLs, right?
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Extranets
-East-west traffic and Zero Trust
+What today we typically say is, we no longer wanna say that everything in our internal network should just be implied trust.
