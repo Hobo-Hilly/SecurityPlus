@@ -62,6 +62,9 @@ Dynamic Host Configuration Protocol
 
 It goes through (DORA)
 1. Discover 
+- The Discover packet actually it is a broadcast communication. 
+
+
 (We will only focus on the Discover part of this process. Because those other 3 processes are unicast communications that go directly to the endpoint )
 2. Offer 
 3. Request 
@@ -71,12 +74,47 @@ FYI: And that DHCP device server, firewalls can do DHCP. A lot of devices can do
 - DHCP snooping is really just at the end of the day, think about it as a way that says this port is allowed to see, send DHCP communications All these other ports, no, we're gonna block them. So that'll keep those unauthorized DHCP servers on your network.
 
 
+# Summary
+EX:
+Lets say a hacker created our little rogue DHCP server unauthorized or even authorised user connects into your network, connects into the port on the switch tries to send one of those DHCP messages and it is blocked. 
+ 
+Now this doesn't just do that because some people Let's say you receive a DHCP discover packet saying a legitimate client on your network saying, hey, I need a DHCP address. All right, the offer comes back but the offer comes back on another port. All right, so it also pays attention to that which ports are these communications within the DHCP happening? 
+ 
+All right, because switching says connect two ports and forward information between just those two ports. Right, I see another port start to get in the mix. That's not good, right? That's some kind of unauthorized access that's happening
+
 MAC filtering
+# How does it work?
+- MAC filtering comes down to the same principle. 
+So we have a few client PCs that are connected into the switch. We know that they have the media access control address, the MAC address. Right? Well, when the PC's actually communicate with a switch The switch keeps track of port to MAC address mappings inside of its CAM table and basically stores that inside of a database. 
+
+- Now when somebody else connects to your network that is unauthorized, what happens there? Well, they're gonna have a MAC address as well. They connect, the switch will end up checking that little database and it's gonna say I'm not exactly sure who you are And you're not in that database and I can't see any port mapping so essentially closes down the port. 
+
+- That's really, in a nutshell what MAC filtering is. And it's just, when we talk about on wireless networks is just done over a wireless communication, right again, still going to be done with MAC addresses stored in database. If it's an unauthorized MAC address, it doesn't make the connection.
 
 
 
 Port mirroring
+- When we want to dive in and see the communications that are happening between two ports.
+
+# How does it work?
+- You can create an analyzing station. We take a single port, maybe one in question, and we're going to map all of the communications that goes in and out of that port to our monitoring station
+
+- So this computer PC 1 is going to talk to PC 2. Well when that happens, there is a duplicate frame that essentially is sent over to the monitoring station. 
+
+- Now PC 2 again part of normal communication is going to communicate if you will Back to PC 1. Well, when that happens, guess what? It's also going to take that frame and it's going to forward it over to the monitoring station.
 
 
+# What is it used for?
+-  why might you want to do something like this? Well, you could do it with this with things like PCs if you want to understand the communication flow that's going on. You can also do it in things like Voice over IP phones. If you want to be privy to the conversations that are going on,
+
+- Keep in mind at the bait at the end of the day, you might also hear a call port spanning Cisco has their switch port analyzer span
 
 Switch Port Analyzer (SPAN)
+
+- And that's essentially what this is doing. It's allowing you to take the communications that are going in and out of one port, make duplicates and then transfer that or forward that information. Over to another port. 
+
+- A lot of times it's gonna be a port that's got a monitoring station of some kind connected to it.
+
+# FYI: Yeah, I've used this quite often to check for malware connectivity that is, is there malware on my system and if so, where's it reaching out to? What is the communications that it's making? Because most modern networks are switched in some way, shape or form.
+
+- So when we're trying to identify a potential for phishing schemes, right phishing attacks, we talked about that in our network attacks. It's a voice over IP based type of attack. Well We can kind of be privy to that communication, right? We can see where's the communications going through are those frames being modified or manipulated in any way that might redirect that information to another port for whatever reason. 
