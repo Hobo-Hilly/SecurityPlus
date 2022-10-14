@@ -208,6 +208,12 @@ Round Robin
 Weighted Round Robin
 
 Least Connection
+- Least connection mode gives the NIC the ability to see Hey, these 3 servers are very connection heavy right now. Load balancing can say hey, let me look at our devices. Let's look at our components that are pooled together and you know what? I noticed that one right there isn't really busy.
+- These other 3 they're really pulling their weight, but this one over here, it's kinda silent, it's snoozy. Not really getting a lot of requests, right now. So what this is called, is a least connection type of scheduling. 
+- It says, hey, look at the pool of resources that we have and find the one that isn't really being overburdened. And let's go ahead and redirect or schedule traffic to that location. Now imagine this, you add additional parameters, parameters to it, you make it a lot more granular, and you now have something notice weighted least connection. 
+
+
+
 
 Weighted Least Connection
 
