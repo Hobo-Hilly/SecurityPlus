@@ -99,9 +99,146 @@ It is perfect for testing stuff that's what we do to test our machines out and t
 
 
 
-Virtual Network Adapters
+Virtual Network Adapters ( AKA Virtual NICs)
+
+# How does it work?
+So basically within the host machine, you have your guests right?. And our guest and we've got I'm using both terms now VMs 1, 2, 3 and 4 well they need to communicate. Well your host adapter inside of the host machine can be allocated through the hypervisor to each one of these guests machines and to the guest machines they think it's their physical network adapter, even though we know really it's just a software abstraction of that the host physical adapter and it communicates no different. 
+
+                                                     Virtual NIC-1             Guest(VM1)
+* * * * * * * *
+*   HOST      *    # # # # # # # # # #               Virtual NIC-2            Guest(VM2)
+*  MACHINE    *    # HOST's(Physical) #                  
+*             *    #   NIC (Adapter) #               Virtual NIC-3            Guest(VM3)
+*             *    # # # # # # # # # # 
+* * * * * * * *                                       Virtual NIC-4           Guest(VM4)
+
+======================================================================================================================================
+FYI: Inside of that host machine when these computer these guest machines wanna talk again they have to follow the same rules of TCP/IP.
+
 
 Virtual Networks
+- A virtual switch is really, basically, a virtualized form of what we see is a physical switch that really runs in software inside of the host machine.
+- Called a 'V Switch' Virtual Switch
+- this allows us to do something known as virtual networking.
+- So, the host machine creates this virtualized switch and what happens is the communication between the VMs go into that virtualized switch
+- This first switch if they only can talk between each other that's more of an internal switch and that's where all communications between the VMs you get true what's known as isolation. 
+
+
+
+
+                                                     Virtual NIC-1             Guest(VM1)
+* * * * * * * *
+*   HOST      *    # # # # # # # # # #               Virtual NIC-2            Guest(VM2)
+*  MACHINE    *    #  Virtual Switch #                  
+*             *    #                 #               Virtual NIC-3            Guest(VM3)
+*             *    # # # # # # # # # # 
+* * * * * * * *                                       Virtual NIC-4           Guest(VM4)
+
+======================================================================================================================================
+
+# Summary 
+- It boils down to 3 options. VM to VM, or in this case, we can do VM to host , VM to LAN
+- And now that allows every one of these virtual machines to act like it's a physical device plugged into a physical network talking to your local area network and really and beyond. You can talk to the internet
+
+
+|              |                               # # # # # # # # # #
+| Host Machine | XX ====== NO COMMS ======= XX # Virtual Switch  #
+|              |                               # # # # # # # # # #
+                                                ^^
+                                                ||
+                                                ||
+                                                ||
+                                                \/
+| VM-1  |                    | VM-2   |                    | VM-3  |                    |  VM-4 |
+| VNIC-1|    <---------->    | VNIC-2 |   <------------>   | VNIC-3|    <---------->    | VNIC-4|
+                 SUCCESS                        COMMS                   Amoungst themselves but NO WHERE ELSE
+
+================================================================================================================================
+
+- This first switch if they only can talk between each other that's more of an internal switch and that's where all communications between the VMs you get true what's known as isolation. 
+
+
+VM to Host
+
+- When you start doing VM to host remember I told you you have the isolation and whatever affects the guest doesn't necessarily affect the host. Here's where you're opening that pipeline. Now you're saying, hey, communicate with a host, just like it's another machine within the network
+SECOND TYPE OF Vswitch
+
+VM to Host
+# How does it work?
+
+EX:
+
+
+|              |                               # # # # # # # # # #
+| Host Machine | <> ====== SUCCESS =======<>   # Virtual Switch  #
+|              |                               # # # # # # # # # #
+                                                ^^
+                                                ||
+                                                ||
+                                                ||
+                                                \/
+| VM-1  |                    | VM-2   |                    | VM-3  |                    |  VM-4 |
+| VNIC-1|    <---------->    | VNIC-2 |   <------------>   | VNIC-3|    <---------->    | VNIC-4|
+                 SUCCESS                        COMMS           Between the Virtual machines AND the HOST Machine
+=====================================================================================================================================
+
+
+THIRD type of Virtual Switch
+VM to LAN
+
+# How does it work?
+
+- The 3rd one allows every one of these virtual machines to act like it's a physical device plugged into a physical network talking to your local area network and really and beyond. You can talk to the internet and now at that that point, you really got to be careful cuz anything that affects the guest affects the host machine and it also affects the rest of the network too.
+
+EX:                                                                     
+                                                                                - - - - - - - - - - - - - - - - - - - - 
+                                                                                -      LAN                             -
+|              |                               # # # # # # # # # #              - Local Area Network                   -
+| Host Machine | <> ====== SUCCESS =======<>   # Virtual Switch  # <=========>  - (your internal real physcal netwrok) -
+|              |                               # # # # # # # # # #              - - - - - - - - - - - - - - - - - - -  -
+                                                ^^                  SUCCESSFUL COMMS ALL AROUND!!
+                                                ||
+                                                ||
+                                                ||
+                                                \/
+| VM-1  |                    | VM-2   |                    | VM-3  |                    |  VM-4 |
+| VNIC-1|    <---------->    | VNIC-2 |   <------------>   | VNIC-3|    <---------->    | VNIC-4|
+                 SUCCESS                        COMMS           Between the Virtual machines AND the HOST Machine AND The LAN
+=====================================================================================================================================
+
 
 Network Functions Virtualization (NFV)
 
+All right, when I want to create a virtualized machine, or VM, right, I've got to configure the host machine. I've got to create the virtual machine. And then from there, I've got to allocate the resources. We've got to determine how much memory it has, how much hard drive it's going to be used, and what the network adapter is. And again, you can kind of see the redundancy, right? I got to determine what the operating system is. What is it running? Is it running Linux or something like that. Notice Mac isn't not here. Mac is only legally virtualized on Mac platform.
+
+CONTAINERS
+
+# How does it work?
+- You don't have to worry about the operating system. I don't have to worry about the hardware. I don't have to worry about the virtual machine. And we can have more than one running. And we can use this. A lot of times they use this for development because what it does is it says, I don't care what the underlying hardware is. I just need some kind of functionality. Let's say in development, I need to run some kind of programming language. But I don't wanna worry about all of that individual stuff. Well, that's where the containers come in
+
+
+-  And they're the isolated instances that you don't have to worry about setting up all of that infrastructure in order to say, let's say run your C++ programming right? Now I pulled down a container. It's got all that prepared for me. And now I can just go to work and I can start doing the development, not me, I could spell C++ on a good day. I'm not a developer. But this definitely takes a lot of the burden, if you will, the operation side of things like development.
+
+Container Engines
+- Docker
+- Oracle Cloud Infrastructure
+- Canonical LXD
+- Amazon Elastic
+
+
+CONSIDERATIONS 
+
+- Virtualization
+    Better resource utilization
+    Multiple software environments
+    scalable
+- Virtual Machines
+    isolated software environments
+    Requires Configuration
+    Needs to be SECURED like any other device
+
+- Containers
+    Ease of configuration
+    less overhead
+    Platform independent (You only need to container vendor and thats all)
+    Portability Fire it up and blow it out
