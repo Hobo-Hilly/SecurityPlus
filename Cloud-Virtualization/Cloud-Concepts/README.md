@@ -70,3 +70,7 @@ Rapid Elasticity
 
 
 Measured Service
+- This means is that everything that you're doing is metered and measured
+- Helps customers and service providers determine exactly how much money is needed
+
+The measurement allows the Cloud provider and the customer to keep track of the resources that they're using as part of their subscription.
