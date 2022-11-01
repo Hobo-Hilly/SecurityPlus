@@ -86,3 +86,53 @@ Nessus
 Cuckoo
 - Sandbox for malware analysis
 
+
+# Summary
+
+ipconfig:
+
+- ifconfig tells you information about the network interfaces, you can see things like your MAC addresses, if you will, if the MTU, as well as, IP address, a lot of good information. You can see the link local here, IPv6 address. 
+
+
+EX: This is an example the instructor gave in class on how this fits into the grand scheme of things. At least if your pentesting. Or doing network admin stuff i guess lol ; 
+
+- Moving into ideas like DNS, I wanna look at what machines are alive, what what do I even have going on? I can use ping and sweep through the network, find live hosts. Then I'm gonna jump into something like nmap here to get a more of the, okay, now I know what hosts are alive. 
+
+- I could have used nmap to do that, as well, that's what Wes has said. Now, I wanna learn more about these machines. Okay, I've got a group of Windows machines, I've got a group of Linux machines, a couple of Mac boxes, it looks like maybe I have some printers. 
+
+- And I'm gonna start to understand the topology of the network itself. Okay, what services are running on these Windows machines? Cool, I can use nmap to do that. 
+
+- As I start to figure out that information and basically start to silo all these machines into hidey holes to say, okay, I might go after this. This is definitely some low hanging fruit there. I know there is a vulnerability with this version of that FTP server that they're using. 
+
+- Cool, I'm gonna start there, that's gonna be my first stop. That's what nmap is helping us do. If we're trying to secure that network, I go, I know there's a vulnerability with that FTP server. I need to do something about that. And I discovered that with something as simple as an nmap scan
+
+# This is an example of the instructor walking through a simple nmap scan. 
+
+PORT          STATE      SERVICE                 VERSION
+53/tcp        open       domain                 Simple DNS Plus
+80/tcp        open       http                   Microsoft IIS  httpd 10.0
+  http-methods:
+  potentially risky methods: TRACE
+  _http-server-header ...
+  _http-title: IIs Windows Server
+88/tcp        open      kerberos-sec            Microsoft Windows Kerberos
+135/tcp       open      msrpc                   Microsoft Windows RPC              
+139/tcp       open      netbios-ssn             Microsoft Windows netbios-ssn
+389/tcp       open      ldap                    Microsoft Windows Active Directory LDAP
+445/tcp       open      microsoft-ds?
+464/tcp       open      kpasswd5?
+593/tcp       open      ncacn_http             Microsoft Windows RPC over HTTP 1.0
+636/tcp       open      ssl/ldap               Microsoft Windows Active Directory LDAP
+
+
+
+
+
+
+STATUS: You can see that Port 53 is open. Now, I don't need the service to tell me that it's a domain server, right? I can see Port 80. So, it's running IIS, in this case, it's running a web server. We can see Port 88, that's kerberos. So, now at this point, what I've determined is that this is an active directory machine. 
+
+And the reason I've done that is because Port 88 kerberos, that is the authentication protocol by default for an active directory domain. And the fact that it's running DNS, tells me that it is a domain controller cuz it's got an integrated or active directory DNS zone. So that it can handle name resolution, basically, like looking locally.
+
+We can see the LDAP. That should be a telltale sign that it's running that LDAP database, right? Being a domain server.
+
+
