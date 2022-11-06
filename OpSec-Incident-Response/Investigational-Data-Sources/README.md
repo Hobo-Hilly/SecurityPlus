@@ -43,9 +43,16 @@ For instance, you can see the critical or the credit manager, Credential Manager
 
 - We have those system logs and security logs in Windows for authentication. 
 
-Security (Authentication)
+# What if we want look at DNS/ Active Directory Web server/ Directory Service
+1. Expand Applications and Services Log
+2. select your desired resource to audit
 
+Security (Authentication)
 Dump files (Local machine Preview)
+
+Microsoft WinDbg Preview is a tool from the store you can get to help you scrutinize dump files.
+# SPECIAL NOTE!!!
+The program will not allow you to open the Original file. Make a copy of the data and store it in downloads or Desktop. You need to do this so that you can get around the permissions issue you are going to have if you dont copy the file into an insecure place.
 
 Log files (Linux)
 
