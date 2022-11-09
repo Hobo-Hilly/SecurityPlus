@@ -58,10 +58,14 @@ it really boils down to port based authentication
     
     Authentication Server(RADIUS Server)
     -  a RADIUS server will send a challenge back to the supplicant, or in this case, the wireless client. 
-    - Then the wireless client responds back to the challenge. How do they do that? I'm gonna type your username and password, right. And then that goes back through the authenticator
-    - The authenticator is the gatekeeper
+    - Then the wireless client responds back to the challenge. How do they do that? I'm gonna type your username and password. And then that goes back through the authenticator to authentication server.
+NOTE: The authenticator is the gatekeeper.
+    - Then RADIUS/Authentication server then ATTEMPTS to decrypt the challange with it's copy of the users password.
+        OPT.1 If decryption is successfull. An ACK(Acknowledgement) packet is sent back to the Supplicant/$USER.
+            - The port opens up and you now make a connection to the network
 
 # Summary  
+EAP it's a framework for authentication,and there are many different methods.
 Know what 802.1X is. It is a port based authentication down at the physical level, we can close the electrical current off to the port while we go talk to the person that we need to talk to. If that person says who are you and you pass that test port opens up, you gain connectivity to the wireless network. 
 
 EX:
@@ -69,13 +73,14 @@ EX:
 
    SUPPLICANT                            AUTHENTICATOR                         AUTHENTICATION SERVER
 
-(Wireless Client)- - - - - - - - ->  (802.1X Compliant AP)                        (RADIUS Server)
-(ANY Wireless Device)                        ||(OR)                      (Remote Authentication Dial-In Service)
+(Wireless Client)> - - - - - - - - ->  (802.1X Compliant AP)> - - - - - - - - - -> (RADIUS Server)
+(ANY Wireless Device)  < - - - - - - -  <  ||(OR)   < - - - - - - - - < (Remote Authentication Dial-In Service)
                                        (WLAN Controller)
                                        (WLC Wireless LAN Controller)
 
 # What is a WLC?
     A wireless LAN controller is used in combination with the Lightweight Access Point Protocol to manage light-weight access points in large quantities by the network administrator or network operations center. The wireless LAN controller is part of the Data Plane within the Cisco Wireless Model.
+
 # Application
 When you have 100's maybe 1,000's of AP(Access Points) to manage. You need some type of centralized administration. And WLC offeres that.
 
