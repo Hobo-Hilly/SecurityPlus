@@ -8,7 +8,7 @@ EAP (Extensible Authentication Protocol)
 - This expands on PPP ( Point to point protocol)
 
 EAP Types
-EAP-FAST (Extensible Authentication Protocol - Flexible authentication Secure Tunnel)
+EAP-FAST (Extensible Authentication Protocol - Flexible Authentication Secure Tunnel)
 - It's a protocol that was developed by Cisco and it's used in wireless networks and point to point communications
 
 EAP-TLS (Extensible Authentication Protocol - Transport Layer Security)
