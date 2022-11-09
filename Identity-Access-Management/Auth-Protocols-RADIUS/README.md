@@ -80,14 +80,17 @@ TACACS(Terminal Access Controller Access Control System)
 - Cisco Proprietary software
 - Sperates the AAA roles
 
-- RADIUS does AAA all on one server. TACACS allows you to break up the AAA and send parts to another server. making it more expensive to implement but tachnically stronger
+- RADIUS does AAA all on one server. 
+TACACS allows you to break up the AAA and send parts to another server. making it more expensive to implement but tachnically stronger
 
 - TACACS+ uses TCP encryption
+- More expensive and a lot of infrastructure behind it
 
-# Summary
+# Whats the difference between RADIUS and TACACS+?
+
 (RADIUS) UDP is a connectionless protocol. It doesn't verify at best, you get a checksum that says, yeah, that's bad, throw it up.
 
-(TACACS)TCP on the other hand, is a stateful connection oriented protocol, which we're gonna make sure, that we have established a session, the packets are tracked in sequence, broke down, and then the session is terminated. And if something's wrong, we call back to the other side and we say, hey, something's broke, fix it
+(TACACS) TCP on the other hand, is a stateful connection oriented protocol, which we're gonna make sure, that we have established a session, the packets are tracked in sequence, broke down, and then the session is terminated. And if something's wrong, we call back to the other side and we say, hey, something's broke, fix it
 
 RADIUS does use encryption, but the ONLY THING that it ENCRYPTS is the PASSWORD! 
 
