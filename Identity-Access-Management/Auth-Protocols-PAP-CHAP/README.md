@@ -20,7 +20,7 @@ FYI: Well, when this first came out, we were using PAP with something called the
 
 FYI: We have ACK and NACK, if you hear, ACK is an acknowledgment, we talked about the TCP three-way handshake, right? We have the SYN, SYN-ACK. That's a synchronization acknowledgment. NACK is a negative acknowledgment. So you'll see this ACK and NACK a lot.
 
-CHAP ( Challange Hanshake Authentication Protocol)
+CHAP (Challange Hanshake Authentication Protocol)
 - So CHAP, really today is gonna be used, if at all, in a non Windows environment because Microsoft came out, like they did with a lot of products, they made their own flavor of CHAP, that's Microsoft's CHAP implementation
 
 EX: 
@@ -34,19 +34,28 @@ EX:
     So $SERVER1 uses it's copy of $USERS's password to decrypt the challange it recieves back from the $USER
 
 4. Once the $SERVER1 receieves the encrypted challange back. 
+
 5. It will reach into its database and try to decrypt the challange with the correct password(What ever password it has stored in it's database). 
-6. If the the challange can be decrypted by $SERVER1 you are granted access.
-    - However if you were to type in the wrong password, when the $SERVER1 tries to decrypt it with the password it has in it's database it will not decrypt. Which means no soup for you! 
+
+6. If when the server uses it's copy of $USER's password to decrypt(reverse the encryption) on the challange it has received back from $USER and the process is successfull you are granted access.
+
+- However if you were to type in the wrong password, when the $SERVER1 tries to decrypt it with the password it has in it's database it will not decrypt. Which means no soup for you! 
+
+NOTE: This is an example of a symetric encryption. They use the same key to encrypt and decrypt! 
+
+
 
 # Whats different?
 So with this process, the authentication handshake is encrypted between the two endpoints. So since it never hits the wire it cannot be sinffed like PAP can.
 
+CHAP(Challange Hanshake Authentication Protocol) versions
+- Non-Windows environments
 
-CHAP versions
+MS-CHAP(Microsoft CHAP implementation)-(Challange Hanshake Authentication Protocol)
+    -Microsoft's CHAP implementation
+    -WEAK
 
-MS-CHAP(Microsoft CHAP implementation)
-
-MS-CHAPv2
+MS-CHAPv2 (Challange Hanshake Authentication Protocol)
 - So today's standard Authentication, especially in Windows environments is MS-CHAPv2
-- Brings in mutual authentication. Menas both endpoints can authenticate
-- Allows for alot stronger cryptographic keys
+- Brings in "Mutual Authentication". Menas both endpoints can authenticate
+- Allows for alot STRONGER cryptographic keys
