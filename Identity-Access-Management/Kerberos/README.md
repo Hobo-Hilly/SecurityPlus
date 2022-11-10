@@ -1,4 +1,10 @@
-
+Title: Authentication-Protocols-Kerberos 
+Topic: Authentication and Authorization
+Host: Dan Lowrie
+Instructor: Wes Bryant
+Summary:
+Today we will identify authentication protocol developed by MIT and used in Windows Active Directory domains called Kerberos
+---------------------------------------------------------------------------------------------------------
 Windows Active Directory
 DEFAULT PORT 88
 Kerberos
