@@ -20,19 +20,19 @@ EX:
 when you have every device in the network listening to every other device in the network, you have a potential for information to get transmitted between these devices that you don't necessarily want to be transmitted to everybody.
 
 =============================== Visual Example ======================================================================
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
--                                                                                                                     -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-                                                                                                               -
 -                                               NETWORK                                                               -  
--                                                                                                                     -  
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--     *  SRVR1          SRVR2           *                           * SRVR4      SRVR5      SRVR6     *               -
--     *                                 *                           *                                 *               -
--     *                                 *  - - - - >  XXX <- - - -  *                                 *               -
-      *   Segment # 1                   *                           *    Segment # 2                  *               -
--     * COM1   COM2    COM3  COM4       *                           * COM5 COM6 COM7 COM8 COM9 COM10  *               -
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--                                                                                                                     -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+-                                                                                                               -  
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               
+-     *  SRVR1          SRVR2           *                           * SRVR4      SRVR5      SRVR6        *               
+-     *                                 *                           *                                    *               
+-     *                                 *  - - - - >  XXX <- - - -  *                                       *               
+      *   Segment # 1                   *                           *    Segment # 2
+-     * COM1   COM2    COM3  COM4       *                           * COM5 COM6 COM7 COM8 COM9 COM10   
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * * 
+-                                                                                                               
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 KEY
 XXX = Cross communication chatter is elemenated 
 SRVX = Servers
@@ -45,7 +45,7 @@ but this helps to really just streamline the performance of your networks. Isola
 So not every device will hear every other device on the network and again, bringing down those things like broadcast domains and really just isolating that communication to the series of computers that you need.
 
 # But basically what we're saying is by and large, if your traffic doesn't need to go over there and be looked at keep it out of that system. 
-FYI: HUBS are nothing more than a multiport repeater. A communication comes in one port automatically gets sent out all other ports. They don't inspect traffic or everything
+FYI: HUBS are nothing more than a multiport repeater. A communication comes in one port automatically gets sent out all other ports. They don't inspect traffic or anything
 
 # How does it work?
  And as you connect more devices and more hubs, you can have one device send out a broadcast communication that was really only intended for just a subset of the computers within that network, but everybody hears it, right? And that can cause those performance issues that ultimately can run contrary to the availability side of the CIA triad.
@@ -66,20 +66,20 @@ Virtual local area network (VLAN)
 - This is segmentation using layer 2 on the OSI model Data Link Layer
 
 LAYER 2 (Data Link Layer) VLANS 
-=============================== Visual Example Subnetting with VLANS ==================================================
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
--                                            * * * * * * * * * * *                                                    -
--                                            *     NETWORK       *                                                    -  
--                                            * * * * * * * * * * *                                                    -  
+=============================== Visual Example Subnetting with VLANS =============================
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-                                            * * * * * * * * * * *                                                    
+-                                            *     NETWORK       *                                                      
+-                                            * * * * * * * * * * *                                                      
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               
+-     *  SRVR1          SRVR2           *                           * SRVR4      SRVR5      SRVR6               
+-     *                                 *                           *                                 *               
+-     *                                 *  - - - - >  XXX <- - - -  *                                 *               
+      *   VLAN 10                       *                           *    VLAN  20                     *               
+-     * COM1   COM2    COM3  COM4       *                           * COM5 COM6 COM7 COM8 COM9 COM10  *               
 -     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--     *  SRVR1          SRVR2           *                           * SRVR4      SRVR5      SRVR6     *               -
--     *                                 *                           *                                 *               -
--     *                                 *  - - - - >  XXX <- - - -  *                                 *               -
-      *   VLAN 10                       *                           *    VLAN  20                     *               -
--     * COM1   COM2    COM3  COM4       *                           * COM5 COM6 COM7 COM8 COM9 COM10  *               -
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--                                                                                                                     -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+-                                                                                                                     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 KEY
 VLAN = Virtual Local Area Network
 XXX = Cross communication chatter is elemenated 
@@ -88,20 +88,20 @@ COMX = Host Computers
 
 
 LAYER 3 (Network Layer) Subnets
-======================================== Visual Examlpe of Segmentation at Layer 3 =======================================
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
--                                            * * * * * * * * * * *                                                    -
--                                            *     NETWORK       *                               -                                            *     ROUTER        *                                                    -  
--                                            * * * * * * * * * * *                                                    -  
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--     *  SRVR1          SRVR2           *                           * SRVR4      SRVR5      SRVR6     *               -
--     *                                 *                           *                                 *               -
--     *                                 *  - - - - >  XXX <- - - -  *                                 *               -
-      *   10.0.0.0/24                   *                           *    10.0.1.0/24                  *               -
--     * COM1   COM2    COM3  COM4       *                           * COM5 COM6 COM7 COM8 COM9 COM10  *               -
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--                                                                                                                     -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+======================================== Visual Examlpe of Segmentation at Layer 3 =
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+-                                            * * * * * * * * * * *                                                    
+-                                            *     NETWORK      *                               -                                            *     ROUTER        *                                                      
+-                                            * * * * * * * * * * *                                                      
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               
+-     *  SRVR1          SRVR2           *                           * SRVR4      SRVR5      SRVR6     *               
+-     *                                 *                           *                                 *               
+-     *                                 *  - - - - >  XXX <- - - -  *                                 *               
+      *   10.0.0.0/24                   *                           *    10.0.1.0/24                  *               
+-     * COM1   COM2    COM3  COM4       *                           * COM5 COM6 COM7 COM8 COM9 COM10  *               
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               
+-                                                                                                                     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 KEY
 ROUTER = Edge router 
 10.0.0.0/24 = Original Internal Subnet
@@ -122,18 +122,18 @@ DMZ (Demilitarized zone)
 
 # How does it work?
 
-=============================== Visual Example ======================================================================
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+=============================== Visual Example ==========
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 -                                                                                                                     -
 -                                               NETWORK                                                               -  
 -                                                                                                                     -  
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
--     *         PUBLIC NETWORK          *                           * SRVR4      ECOM SRVR7     SRVR6 *               -
--     *          Internet               *                           *                                 *               -
--     *                                 *   ---------------->       *                                 *               -
-      *    USER1                        *     Direct connection     *   Private Network               *               -
--     *                                 *                           * COM5          COM6              *               -
--     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               -
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               
+-     *         PUBLIC NETWORK          *                           * SRVR4      ECOM SRVR7     SRVR6 *               
+-     *          Internet               *                           *                                 *               
+-     *                                 *   ---------------->       *                                 *               
+      *    USER1                        *     Direct connection     *   Private Network               *               
+-     *                                 *                           * COM5          COM6              *               
+-     * * * * * * * * * * * * * * * * * *                           * * * * * * * * * * * * * * * * * *               
 -                                                                                                                     -
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 KEY
@@ -209,8 +209,8 @@ SUCCESS = we are able to connect to resource through the permiter network device
 -                                                                                                                                     -
 -                                                                                                                                     -  
 -   * * * * * * * * * * * * * * * *                                                      * * * * * * * * * * * * * * * * * *          -
--  *          PUBLIC NETWORK      *                                                      * SRVR4                     SRVR6 *          -
--  *       Internet               *      - - - - - -                      - - - - - -    *                                 *          -
+-  *          PUBLIC NETWORK      *                                                      * SRVR4                     SRVR6   *          -
+-  *       Internet               *      - - - - - -                      - - - - - -      *                                 *          -
 -  *                              *      -  edge   -     ECOM SRVR7       - edge    -    * Private Network                 *          -
 -  * USER1                        *----> - Router  ---->      --->  ----> - Router  - XXX--->FAIL !!                       *          - -                                 *      - - - - - -                      - - - - - -    *                                 *          -
 -  *                              *                                                      *   COM5   COM6                   *          -
@@ -245,14 +245,14 @@ These computers that are within the VLANs, have the ability to communicate among
 
 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -        - - - - - - - - - - - - - -  -    - - - - - - - -      *
- *   - SRVR-15 /  SRVR-2 -           - SRVR-47 / SRVR-12 / SRVR-7  -        -  HTTPS-SRVR1 / MySQL-SRVR1 -    -  PBX-SRVR1  -      *
- *   -                   -           -                             -        - - - - - - - - - - - - - -  -    -             -      *
- *   - COM-11 / COM-2    -           -  COM-16 / COM-29            -              VLAN 30                     -  VoIP-Phone#-      *
- *   - COM-14 / COM-4    -           -  COM-19 / COM-25            -                                          -  VoIP-Phone#-      *
- *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -                                          - - - - - - - -      *
- *        VLAN  10                             VLAN 20                                                           VLAN 40           *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -        - - - -  - - - - - - - - - - -      
+ *   - SRVR-15 /  SRVR-2 -           - SRVR-47 / SRVR-12 / SRVR-7  -        -  HTTPS-SRVR1 / MySQL-SRVR1 -    -  PBX-SRVR1        
+ *                      -           -                             -        - - - - - - - - - - - - - -  -   -                   
+ *    COM-11 / COM-2    -           -  COM-16 / COM-29            -       VoIP-Phone#-12      
+ *    COM-14 / COM-4    -           -  COM-19 / COM-25            -       VoIP-Phone#-9     
+ *   - - - - - - - - - - -           - - - - - - - - - - - - - -                                               
+ *        VLAN  10                           VLAN 40                              VLAN 30
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 VLAN #10 = Accounting
 
 VLAN #20 = Developers
@@ -291,15 +291,15 @@ If we need that type of functionality, then we can add the routing capabilities.
                     - VLAN 10 bound for VLAN 40                                              -
                   -                                                                             -
                 -                                                            VLAN 10 bound for VLAN 40- - - - - - ->
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * | * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * |
  *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -        - - - - - - - - - - - - - -  -    - - -\/- - - - -     *
  *   - SRVR-15 /  SRVR-2 -           - SRVR-47 / SRVR-12 / SRVR-7  -        -  HTTPS-SRVR1 / MySQL-SRVR1 -    -  PBX-SRVR1  -      *
  *   -                   -           -                             -        - - - - - - - - - - - - - -  -    -             -      *
  *   - COM-11 / COM-2    -           -  COM-16 / COM-29            -              VLAN 30                     -  VoIP-Phone#-      *
  *   - COM-14 / COM-4    -           -  COM-19 / COM-25            -                                          -  VoIP-Phone#-      *
- *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -                                          - - - - - - - -      *
- *        VLAN  10                             VLAN 20                                                           VLAN 40           *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *   - - - - - - - - - - -           - - - - - - - - - - - - - - - -                               *
+ *        VLAN  10                             VLAN20                            VLAN 40           *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 VLAN #10 = Accounting
 
 VLAN #20 = Developers
