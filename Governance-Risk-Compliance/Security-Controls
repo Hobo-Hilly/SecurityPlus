@@ -22,7 +22,14 @@ What catagories of control are there?
 - Physical: Guards, Guns, Gates
 
 
-Security Control Types:
+Security Control Types
+
+Preventative - Attempt to STOP unwanted access
+Detective - Attempt to identify unauthorized access AFTER the occurence of unauthorized activity
+Corrective - Modifies environment to return to normal AFTER occurence of unauthorized activity
+Deterrent - Attempt to DISCOURAGE security policy violations
+Recovery - Attempt to repair or restore after security violation. Extension of Corective controls, but have more advanced capabilities
+Directive- Attempt to specify action(s) to insure compliance with security policy  
 
 
 
