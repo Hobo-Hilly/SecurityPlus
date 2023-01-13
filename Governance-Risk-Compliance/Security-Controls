@@ -29,7 +29,10 @@ Detective - Attempt to identify unauthorized access AFTER the occurence of unaut
 Corrective - Modifies environment to return to normal AFTER occurence of unauthorized activity
 Deterrent - Attempt to DISCOURAGE security policy violations
 Recovery - Attempt to repair or restore after security violation. Extension of Corective controls, but have more advanced capabilities
-Directive- Attempt to specify action(s) to insure compliance with security policy  
+Directive - Attempt to specify action(s) to insure compliance with security policy
+Compensating - An attempt to provide an alternate control in the absence of primary
+
+
 
 
 
