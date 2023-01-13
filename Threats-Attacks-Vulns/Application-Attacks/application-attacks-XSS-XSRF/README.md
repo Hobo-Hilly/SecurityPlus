@@ -3,7 +3,7 @@ This episode is all about Cross Site Scripting and the types therein.
 XSS (Cross Site Scripting)
 # What is it?
 ''
-When we look at cross side scripting, essentially what it is, it's a type of an attack that injects some kind of malicious script that we wanna execute into the web browser.
+When we look at cross site scripting, essentially what it is, it's a type of an attack that injects some kind of malicious script that we wanna execute into the web browser.
 ''
 
 XSS Types (Cross Site Scritping Types)
