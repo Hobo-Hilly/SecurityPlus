@@ -1,0 +1,29 @@
+This is the start of the "Fun Stuff". I'm being sarcastic here but in all seriousness if you want to stand out in ANY subject matter. You need to walk in and ask(find) the shit that NO ONE wants to do. The stuff that is an absolutely nightmare to work with. Then go kick its ass! In all of my security training the LAW is typically the least amount of fun to work with because it is very dry, boring, constantly updating. It's not at all sexy. But hey, if you want to be worth a hill of beans you need to learn this stuff. Well and the OSI model hahaha That being said, lets get started. :) 
+
+What are security controls?
+
+- Most information security professionals will in the same breath, often say security controls and or countermeasures.
+
+-  Think about elements that are going to be focused on and really centered around the opportunity to minimize or mitigate risk. Espcially to the C.I.A Confidentiality (keeping good data away from bad people, bad actors), Integrity (change control for data, making sure that data is not modified without knowledge and consent of the owner), and Availability (making sure that authorized users are able to interact with assets. And remember, data is our number one asset.)
+
+- Safeguards or countermeasures, as we talked about, to avoid, detect, counteract, or minimize security risks to both property physical and virtual.
+
+- Information is just another way of talking about data as one of our primary assets, computer systems and or in general, any kind of asset. Any category, in other words, of asset that the company, the organization owns and has to protect
+
+- Systems of controls can be referred to as frameworks or standards
+
+- Not all controls are equal and not every control is appropriate for every asset. We want to be picky and make sure the proper control is selected for each situation.
+
+
+What catagories of control are there?
+
+- Administrative: Policies || anything that is policy driven
+- Technical/Logical: Software based controls
+- Physical: Guards, Guns, Gates
+
+
+Security Control Types:
+
+
+
+
