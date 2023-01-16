@@ -127,3 +127,172 @@ Ensure that your policy clearly defines all cybersecurity responsibilities.
 Implement a mandatory cybersecurity awareness program and test with period cybersecurity exercises.
 
 Have an incident response plan.
+
+
+Another regulatory standard widely known, used, and respected is the CIS (Center for Internet Security)
+
+CIS Control 1: Inventory and Control of Enterprise Assets
+
+- Overview
+Actively manage (inventory, track, and correct) all enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/Internet of Things (IoT) devices; and servers) connected to the infrastructure physically, virtually, remotely, and those within cloud environments, to accurately know the totality of assets that need to be monitored and protected within the enterprise. This will also support identifying unauthorized and unmanaged assets to remove or remediate.
+ 
+
+CIS Control 2: Inventory and Control of Software Assets
+- Overview
+Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.
+
+CIS Control 3: Data Protection
+- Overview
+Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.
+
+CIS Control 4: Secure Configuration of Enterprise Assets and Software
+- Overview
+Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/IoT devices; and servers) and software (operating systems and applications). 
+
+CIS Control 5: Account Management
+- Overview
+Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and software.
+
+CIS Control 6: Access Control Management
+- Overview
+Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.
+
+CIS Control 7: Continuous Vulnerability Management
+- Overview
+Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise’s infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.
+
+CIS Control 8: Audit Log Management
+- Overview
+Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.
+
+CIS Control 9: Email and Web Browser Protections
+- Overview
+Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.
+
+CIS Control 10: Malware Defenses
+- Overview
+Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.
+ 
+
+CIS Control 11: Data Recovery
+- Overview
+Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.
+
+CIS Control 12: Network Infrastructure Management
+- Overview
+Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.
+
+CIS Control 13: Network Monitoring and Defense
+- Overview
+Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise’s network infrastructure and user base. 
+
+CIS Control 14: Security Awareness and Skills Training
+- Overview
+Develop a process to evaluate service providers who hold sensitive data, or are responsible for an enterprise’s critical IT platforms or processes, to ensure these providers are protecting those platforms and data appropriately.
+
+CIS Control 15: Service Provider Management
+- Overview
+Develop a process to evaluate service providers who hold sensitive data, or are responsible for an enterprise’s critical IT platforms or processes, to ensure these providers are protecting those platforms and data appropriately.
+
+CIS Control 16: Application Software Security
+- Overview
+Manage the security life cycle of in-house developed, hosted, or acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.
+
+CIS Control 17: Incident Response Management
+- Overview
+Establish a program to develop and maintain an incident response capability (e.g., policies, plans, procedures, defined roles, training, and communications) to prepare, detect, and quickly respond to an attack. 
+
+CIS Control 18: Penetration Testing
+- Overview
+Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses in controls (people, processes, and technology), and simulating the objectives and actions of an attacker.
+
+
+Another widely adopted and very popular frame work is the NIST (National Institute of Standards and Technology) framework. Here is a brief overview best I can without pasting the whole article in here...
+
+From a technical standpoint, cybersecurity starts from managing identities, credentials, and their privileges and related access.
+
+SSH is central in cybersecurity, because it is used in every data center for managing and securing networks, hardware, virtualization, systems, and/or data transfers.
+
+Some of the most essential controls and SSH guidance are summarized in the following table. 
+
+NOTE: ** There are three Primary Components of the Frame Work.
+- CORE: Desire cybersecurity outcomes organized in a heierarchy and aligned to more detailed guidence controls.
+- Profiles: Alignment of an organizations requirements and objectives, risk appetite and resources using the desired outcomes of the framework core.
+- Implementation Tiers: A qualitative measure of organizational security risk management practices.
+
+
+
+
+Control	Relating to	SSH Guidance
+
+PR.AC-1	Managing identities and credentials	In addition to users and passwords, SSH keys are access credentials and need to be managed. Many organizations have 10x more SSH keys than traditional users and passwords, and they often grant privileged access. SSH key management is an essential part of IAM and risk management.
+
+PR.AC-3	Remote access	Remote access must be properly managed and monitored. Encrypted protocols, such as SSH, Remote Desktop, or HTTPS, are typically used. Access should be monitored and tunneling back into the internal network from the outside should be prevented.
+
+PR.AC-5	Network integrity	A firewall should be used to protect the boundary and back-tunneling should be prevented.
+
+PR.DS-2	Data in transit	File transfers should use secure protocols. SFTP is the secure file transfer standard supported by all major vendors. SSH is the standard for remote system administration. CryptoAuditor provides auditability, analytics, and forensics capabilities for both.
+
+PR.DS-5	Protection against data leaks	Data Loss Prevention (DLP) systems should be deployed. Such systems should also monitor encrypted file transfers and terminal sessions.
+
+PR.DS-7	Dev/test separation from production	SSH key management needed as key-based access from dev/test to prod is a common finding.
+
+PR.IP-3	Configuration change control	SSH keys are part of security-related configuration, uncontrolled self-provisioning is not acceptable.
+
+PR.MA-2	Remote maintenance	All 3rd party connections should be monitored and access authorized according to process.
+
+PR.PT-4	Communications & control networks protected	SSH or SSL/TLS should be used to protect data transfers and control connections.
+
+DE.CM-4	Malicious code detected	Anti-virus systems should also inspect files inside encrypted protocols entering the organization.
+
+NOTE: **The role of SSH keys in access management has to be emphasized. Their use has become extremely prevalent, to the degree that they now constitute over 90% of all credentials in many organizations. Proper assessment and management of SSH keys is a critical priority. SSH keys are already being exploited by malware and hackers.
+
+Detailed view of core controls
+The framework provides core controls and processes in several areas essential to cybersecurity. It defines the five concurrent functions Identify, Protect, Detect, Respond, Recover. Several of these functions relate to processes and policies. The Protect function, in particular, relates to concrete protections that need to be implemented for systems and data.
+
+Actual controls fall into a number of categories:
+
+Category	Explanation
+
+Asset management (ID.AM)	Inventorying of devices, systems, software platforms, applications, external information systems; mapping organizational communications and data flows; prioritization of resources; definition of cybersecurity roles and responsibilities
+
+Business environment (ID.BE)	Role in critical infrastructure and supply chain; mission priorities & resilience requirements; dependencies on other services; IS role alignment; legal and regulatory requirements understood and managed; governance and risk management processes address cybersecurity risks
+
+Risk assessment (ID.RA)	Vulnerabilities & threats identified, documented, communicated, evaluated (impact & likelihood); responses identified and prioritized
+
+Risk management strategy (ID.RM)	Processes, risk tolerance identified; consideration given to role in critical infrastructure
+
+Access control (PR.AC)	Identities and credentials are managed for authorized devices and users; physical access is controlled; remote access is managed; permissions are managed (principle of least privilege, separation of duties); network integrity protected
+
+Awareness and training (PR.AT)	Awareness and training, privileged user awareness, third party awareness, executive awareness, physical and information security roles training & awareness
+
+Data security (PR.DS)	Data-at-rest protection; data-in-transit protection; formal asset management & disposal; capacity & availability management; protection against data leaks; integrity checking; separation of development and test from production
+Information protection processes and procedures (PR.IP)	Compliance with policy & regulations; data destruction; continuous improvement; information sharing; response planning; response and recovery testing; HR processes (deprovisioning, personnel screening); vulnerability management
+
+Maintenance (PR.MA)	Timely maintenance; control and monitoring over remote maintenance
+
+Protective technology (PR.PT)	Log collection and analytics; removable media usage controls; access to systems and assets is controlled (incorporating the principle of least functionality); communications and control networks are protected
+
+Anomalies and events (DE.AE)	Baseline established, detected events analyzed, multi-source data aggregation and correlation, impact determination, incident alert thresholds
+
+Security continuous monitoring (DE.CM)	Network monitoring; physical monitoring; personnel monitoring; malicious code detection; unauthorized mobile code detection; external service provider monitoring; monitoring unauthorized personnel, devices, and software; vulnerability scans
+
+Detection processes (DE.DP)	Roles and responsibilities, activities, testing, dissemination, continuous improvement
+
+Response planning (RS.RP)	Response plan maintenance and execution
+
+Communications (RS.CO)	Personnel roles, event reporting, information sharing, coordination with stakeholders, voluntary information sharing for situational awareness
+
+Analysis (RS.AN)	Investigation of notifications, impact analysis, forensics investigations, incident categorization
+
+Mitigation (RS.MI)	Containment, mitigation, documentation of acceptable risks
+
+Improvements (RS.IM)	Incorporating lessons learned into response strategy, updating response strategies
+
+Recovery planning (RC.RP)	Execution of recovery plan
+
+Improvements (RC.IM)	Incorporating lessons learned into recovery plans and recover strategies
+
+Communications (RC.CO)	Public relations management, reputation repair, communication of recovery activities to internal stakeholders, executives, management teams
+
+NOTE: ** This is not a one size fits all framework. You are going to need to Nip and Tuck if you will, to get this molded to your paticular business you are trying to secure.
