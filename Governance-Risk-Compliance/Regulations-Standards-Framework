@@ -1,0 +1,60 @@
+This episode is all about Compliance and Regulatory frameworks.
+
+Compliance and regulatory frameworks are just that. There are sets of guidelines, and best practices. Organizations follow these guideline to meet regulatory requirements, improve processes, strengthen security, and achieve other business objectives.
+
+These common frameworks give us a common language that can be used to build the culture of security.
+
+So there is one regulatory framework that is used in todays culture. PCI-DSS (Payment Card Industry Data Security Standards) This is about how large businesses and corporations are required to deal with PII(Personally Identifiable Information) Banks and anyone who deals with credit cards or PII fall into this catagory.
+
+Here is a list of the Requirements Banks and Businesses are required to live by when dealing with our PII.
+
+1. Install and maintain a firewall
+
+Firewalls protect your network by allowing or denying online traffic. This is often the first line of defense against cyber threats.
+
+Establishment of firewall and router rules to block unapproved traffic.
+
+Public access restriction from the internet to the cardholder data environment.
+
+Firewall deployment on devices used to access the organization’s network.
+
+2.  Reconfigure default vendor settings
+One of the easiest ways for a hacker to gain entry into an internal network is by trying the default password combinations. For most hardware devices and network services, default passwords are widely known, and it’s not difficult to quickly run them through. If they aren’t changed, hackers can gain an entry inside the system without any sophisticated hacking techniques.
+
+Before deploying a system on the network, it’s imperative to change its default credentials.
+
+Have custom configuration standards for all system components.
+
+Non-console administrative access has to be encrypted and password protected.
+
+Shared hosting providers should also change default credentials from their server management software side.
+
+3. Protect stored cardholder data
+As a merchant, you have to know where the cardholder's data is going and how it will be stored. No matter what storage compartment is used, most sensitive data should be stored only in an encrypted form.
+
+Minimize data retention time.
+
+Don’t collect any data after the user has passed authorization.
+
+Mask displayed a permanent account number.
+
+Cryptographic keys used for cardholder data encryption should be encrypted.
+
+Have full documentation regarding crucial management procedures.
+
+4.  Encrypt cardholder data transmission
+
+The same standards that hold for payment data storage should also be applied for its transmission. Cardholder data transfers should be performed only via encrypted networks to avoid alterations in transit.
+
+Rely on strong cryptography protocols like SSL/TLS for cardholder’s data encryption in transit.
+
+Avoid storing PANs in plain text.
+
+5. Protect against malware
+Malware can infiltrate your network via e-mail attachments, thumb drives brought by your employees, and other methods. Therefore, PCI DSS includes requirements to have anti-malware countermeasures and adequately maintain them. This should consist of all devices used by the staff and technical department.
+
+Install antivirus software on your devices to protect each endpoint against malware.
+
+Regularly patch your antivirus software to keep up with the latest malware developments.
+
+6. 
