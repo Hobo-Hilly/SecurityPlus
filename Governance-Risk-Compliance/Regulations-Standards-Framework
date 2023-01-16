@@ -57,4 +57,73 @@ Install antivirus software on your devices to protect each endpoint against malw
 
 Regularly patch your antivirus software to keep up with the latest malware developments.
 
-6. 
+6. Maintain your system’s and applications' security
+It’s essential to have a thorough risk assessment for your organization’s systems. This should allow you to identify potential attack vectors that could be used to breach the company’s network to obtain financial information. Discovered vulnerabilities should also be patched up as soon as possible.
+
+Always install the latest vendor-supplied security updates.
+
+Have a framework for timely new vulnerabilities identification.
+
+Make sure your developed applications also follow PCI DSS
+
+Protect your public infrastructure against known attacks
+
+7. Restrict access to cardholder data
+Access to payment data should be provided only on a need-to-know basis and for specific roles. In a nutshell, only if your role requires access to a customer’s payment data, it’s the only case when permission could be granted.
+
+System components dealing with cardholder’s data should be accessible to personnel directly required to have such access.
+
+Have access control systems in cases when the same components are shared between multiple users.
+
+8. Assign user access identification
+According to PCI DSS, every user should be assigned their unique credentials for accessing critical systems. Shared passwords for several user groups should be avoided as they increase the risks of falling into a malicious individual’s hands. It also ensures a trace of user logs to use as a reference in a data breach.
+
+User names should be assigned to each user accessing the system.
+
+Enforce strict user authentication methods.
+
+Add two-factor authentication to increase further the complexity required to log in.
+
+Don’t store passwords in plain text.
+
+9.  Restrict physical access to cardholder data
+Physical security is another security side that organizations have to take care of to be PCI DSS compliant. Protection of physical hardware is crucial as hackers could install various bypass mechanisms to tap into the network directly. Therefore, physical access to servers housing cardholder data should be restricted with video cameras and general electronic monitoring.
+
+Enforce strict entry controls to buildings and rooms housing hardware that processes cardholder’s data.
+
+Develop authorization mechanisms that only employees would be able to get into the premises.
+
+Use video surveillance and keep visitor logs to maintain a physical audit trail.
+
+Store backups off-site in a secured location.
+
+Shred media containing cardholder data when it’s no longer needed.
+
+10. Track and monitor network access
+It’s always a good bet to assume that your company’s network is in someone’s sights. Therefore, it’s necessary to keep all networks properly protected and monitor each access. Network activity logs should help you discover irregular patterns, which could be used to deter attacks.
+
+Link access to specific components to specific users.
+
+Automate your auditing to have data to reconstruct the events.
+
+Review and evaluate system component logs daily.
+
+11. Perpetual security systems testing
+Your system should be tested against vulnerabilities that would allow the execution of malicious code. In-depth penetration tests can provide a good insight into the system’s security status and highlight the areas that should be improved. Perpetual security maintenance allows for patching up the holes that could be used to get into your network.
+
+Use wireless analyzers to find the presence of wireless points on-premise.
+
+Perform vulnerability scans on internal and external networks.
+
+Monitor your traffic with a network intrusion system.
+
+12. Have a cybersecurity policy
+Your cybersecurity policy should cover employees, management, and third-parties responsibilities. It’s a foundation that sets the tone for how all cybersecurity matters will be handled in your organization. All your employees should be aware of the responsibility that falls on their shoulders.
+
+Have a security policy that addresses all PCI DSS requirements
+
+Ensure that your policy clearly defines all cybersecurity responsibilities.
+
+Implement a mandatory cybersecurity awareness program and test with period cybersecurity exercises.
+
+Have an incident response plan.
