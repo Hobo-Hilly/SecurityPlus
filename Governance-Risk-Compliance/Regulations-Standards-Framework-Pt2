@@ -1,3 +1,11 @@
+NIST CSF Framework
+This framework provides a common taxonomy and mechinism for organizations to
+1. Describe the current security posture of a business
+2. Describe their target state for cybersecurity
+3. Identify and prioritize oppertunities for improvement within the context of a continuos and repeatable process
+4. Assess progress toward the targeted state
+5. Communicate among internal and external stakeholders about cybersecurity risk
+
 Another widely adopted and very popular frame work is the NIST (National Institute of Standards and Technology) framework. Here is a brief overview best I can without pasting the whole article in here...
 
 From a technical standpoint, cybersecurity starts from managing identities, credentials, and their privileges and related access.
@@ -10,9 +18,6 @@ NOTE: ** There are three Primary Components of the Frame Work.
 - CORE: Desire cybersecurity outcomes organized in a heierarchy and aligned to more detailed guidence controls.
 - Profiles: Alignment of an organizations requirements and objectives, risk appetite and resources using the desired outcomes of the framework core.
 - Implementation Tiers: A qualitative measure of organizational security risk management practices.
-
-
-
 
 Control	Relating to	SSH Guidance
 
@@ -87,3 +92,56 @@ Improvements (RC.IM)	Incorporating lessons learned into recovery plans and recov
 Communications (RC.CO)	Public relations management, reputation repair, communication of recovery activities to internal stakeholders, executives, management teams
 
 NOTE: ** This is not a one size fits all framework. You are going to need to Nip and Tuck if you will, to get this molded to your paticular business you are trying to secure.
+
+
+Here is another NIST standard that we need to know for the test. The NIST RMF Risk Management Framework
+
+Key Frameworks NIST(National Institute of Standards and Technology) overview
+
+The RMF emphasizes risk management by promoting the developement of security and privavcy capabilities into information systems throughout the (SDLC) system Developemtn Life Cycle 
+
+The management of organizational risk is a key element in the organization's information security program and provides an effective framework for selecting the appropriate security controls for a system.
+
+There are seven steps to implementing the NIST RMF Framework...
+
+0. Purpose: Carry out essential activities to help prepare all levels of the organization to manage its security and privacy risks using the RMF
+ 
+Outcomes: 
+
+key risk management roles identified
+organizational risk management strategy established, risk tolerance determined
+organization-wide risk assessment
+organization-wide strategy for continuous monitoring developed and implemented
+common controls identified
+
+1. Purpose: Inform organizational risk management processes and tasks by determining the adverse impact  with respect to the loss of confidentiality, integrity, and availability of systems and the information processed, stored, and transmitted by those systems
+ 
+Outcomes: 
+system characteristics documented
+security categorization of the system and information completed
+categorization decision reviewed/approved by authorizing official
+
+2. Purpose: Inform organizational risk management processes and tasks by determining the adverse impact  with respect to the loss of confidentiality, integrity, and availability of systems and the information processed, stored, and transmitted by those systems
+ 
+Outcomes: 
+system characteristics documented
+security categorization of the system and information completed
+categorization decision reviewed/approved by authorizing official
+
+3. Implement the security controls and document how the controls are deployed within the system and environment of operations
+
+4. Assess the security controls using appropriate procedures to determine the extent to which the controls are implemented. correctly, opperating as intended and producing the desired outcome with respect to meeting the security requirements for the system.
+
+5. Authorize system operation based on a determination of the risk to organizational operations and assests, individuals other organizations and the Nation resulting from the operation of the system and the decision that the risk is acceptable.
+
+6. Monitor and assess selected security controls in the system on an on going basis including assess security control effectiveness, documenting changes to the system, or environment of operation, conducting security impact analyses of the associated changes, and reporting the security state of the system to appropriate organizational officials.
+
+Key Frameworks-International Organization for Standardization (ISO)27001/27002/27701/31000
+
+(ISO)27001:2013 Information Technology- Security Techniques- Information Security management systems Requirements
+
+(ISO)27002:2013 Information technology - Security Techniques- code of practive for information security controls
+
+(ISO)27701:2019 Security Techniques, and ext to (ISO)27001 and ISO 27002 for privacy information mangement -- Requirements and guidelines.
+
+(ISO)31000:2018 Risk Management -- guidelines 
