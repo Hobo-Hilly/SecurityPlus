@@ -1,7 +1,7 @@
 MiTM ( Man in the Middle)
 ''
 Is when an individual(bad actor), gets in the middle and basically can redirect this communication anyway essentially they want it. They're sniffing the traffic then they're eavesdropping. 
-However, if they're capturing that traffic, remember they can store it for us at a later time, essentially replay that information back to the server, gaining access to some kind of resource.
+However, if they're capturing that traffic, remember they can store it for use at a later time, essentially replay that information back to the server, gaining access to some kind of resource.
 
 ''
 
