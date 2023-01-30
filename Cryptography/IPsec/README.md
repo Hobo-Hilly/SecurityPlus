@@ -12,10 +12,10 @@
                                                     *                               *
                                                     *                               *                                
 * * * * * * * * *                                   *           PUBLIC              *                               * * * * * * * * *
-*  Main         *          * * * * * *              *           INTERNET            *           * * * * *           * Partner       *
-*               * - - - - -*  Edge   * - - - - - -  *                               *- - - - - -* Edge  *- - - - - -*               *
-*  Network      *          *  Router *              *                               *           * Router*           * Network       *
-* * * * * * * * *          * * * * * *              *                               *           * * * * *           * * * * * * * * * 
+*  Main         *          * * * * * *              *           INTERNET            *           * * * * *               *      Partner       *
+*               * - - - - -*  Edge   * - - - - - -  *                         *- - - - - -* Edge  *- - - - - *               *
+*  Network      *          *  Router *              *                         *           * Router*           *  Network      *
+* * * * * * * * *          * * * * * *              *                         *           * * * * *           * * * * * * * * * 
                                                     *                               *
                                                     * * * * * * * * * * * * * * * * * 
 
@@ -34,12 +34,12 @@ Now these are typically what are known as site to site. Router to router, gatewa
 
 EX: How about a situation where you have one user that needs to make a connection across the public network into a remote access server and then gain access to the corporate resources or the resources within the corporate network.
 
-- We would use a remote access VPN says well
+- We would use a remote access VPN as well
 
 
 Now the difference between those two types of VPNs. Site to Site means that the routers, the gateways are establishing a tunnel for encrypted communication here with remote access VPN.
 
-You'll notice that we do not have two routers here, right? It's not site to site. What we have is client software typically running on the operating system of the client. That's gonna connect, and they're gonna connect into a gateway, so you might hear it called client Gateway, or even just a remote access. 
+You'll notice that we do not have two routers here. Because It's not site to site. What we have is client software typically running on the operating system of the client. That's gonna connect, and they're gonna connect into a gateway, so you might hear it called Client Gateway, or even just a remote access. 
 
 - But notice the difference here. Multiple connections can be used in these site to site type VPNs. 
 
@@ -53,15 +53,15 @@ You'll notice that we do not have two routers here, right? It's not site to site
 
 * IP Sec Components - Phase 1 SA **\(two slides\)**
 - There is NO Sensitive information going anywhere right meow. 
-- This phase is simply a negotiation the defines...
+- This phase is simply a negotiation that defines...
     1. What the key exchange method is going to be (Which diffie hellman method are you going to use)
     2. Authentication Method two options (PSK Pre Shared Key aka Password || Certificates )
-    - Passphrases aren't quite as secure as a certificate, so if you're going to go through the process of setting up an IP SEK VPN, chances are going to be using a certificate, but understand that you could use a pre shared key as well
-    - Remember the Diffie Hellman key exchange? The higher the group number, the more the stronger it is
+    - Passphrases aren't quite as secure as a certificate, so if you're going to go through the process of setting up an IPSEC VPN, chances are you're going to be using a certificate, but understand that you could use a (PSK) pre shared key as well
+    - Remember the Diffie Hellman key exchange? The higher the group number, the stronger it is
     3. Encryption (AES, 3DES, DES)
     4. Session Duration
     - part of the session duration is defined before we start communicating and when that session is done Ipsec will tear the tunnel down
-    EX:  If I capture information and I try to replay it to Dan when he's had an IPsec communication, let's say between him and an end point. Problem is. That session is tore down. That's not going to be trusted, so we also do session duration. That is the phase One security Association
+    EX:  If I capture information and I try to replay it to Dan when he's had an IPsec communication, let's say between him and an end point. Problem is. That session is tore down. That's not going to be trusted, so we also do session duration. That is phase One (SA) Security Association
 
                                  At this point it is just defining traffic management to set up 
 
@@ -73,13 +73,12 @@ You'll notice that we do not have two routers here, right? It's not site to site
 - We will be setting up two ONE WAY tunnels. One from each end point to the other. Both sending one way encrypted data
 
 1. Negotiation ( )
-2. IP Sec Protocol (We're going to define what is the IPsec protocol we're going to use, which means do we need the authentication and integrity without encryption? Or do we need authentication integrity, with encryption)
+2. IPSec Protocol (We're going to define what is the IPsec protocol we're going to use, which means do we need the authentication and integrity without encryption? Or do we need authentication integrity, with encryption)
 3. Then once that's done, we're going to define what the encapsulation method is
 4. And then authentication, this time is going to be MD5 or SHA
 5. Session Duration( How long should I wait? We're going to define that before we actually set these up, so that once that data communication is done, that security association is tore down.)
 6. Right here's an optional DH exchange Diffie Hellman exchange
 - This is for if you wanted to implement perfect forward secrecy: And what that means is that it's going to rotate. Through keys for each communication that goes through that tunnel
-
 
 
 * IP Sec Protocols 
@@ -89,17 +88,22 @@ AH
 - Does not offer encryption 
 - Uses IP Protocol 51
 
+NOTE: TCP port 51 uses the Transmission Control Protocol. TCP is one of the main protocols in TCP/IP networks. Whereas the IP protocol deals only with packets, TCP enables two hosts to establish a connection and exchange streams of data.
+NOTE: UDP port 51 uses the Datagram Protocol, a communications protocol for the Internet network layer, transport layer, and session layer. This protocol when used over PORT 51 makes possible the transmission of a datagram message from one computer to an application running in another computer.
+
 ESP (Encapsulated Security Payload)
 This is what is actually going to encrypt that information as it makes its way again across that IPsec tunnel
 - Encapsulating Security Payload
 - Offers Authentication/ Integrity and Encryption
-- Uses IPprotocol 50
+- Uses IP protocol 50
+
+NOTE: Protocol ID 50 is "Encapsulation Security Payload (ESP) IPSec" which is encrypted traffic will not show the SrcPort or DstPort in the Netflow data because it is encrypted. NFA needs to know the source port and destination port in order to determine which port traffic is seen on
 
 IPSec Encapsulation
 
 Transport Mode vs Tunnel Mode
 
-***  With out Ipsec
+***  Without Ipsec
 
 IP Header   |    TCP/UDP   |  Payload
 
