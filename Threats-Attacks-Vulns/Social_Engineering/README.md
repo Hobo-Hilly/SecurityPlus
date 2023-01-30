@@ -35,7 +35,7 @@ Any condition that leaves you open to some kind of attack
 
 Attack
 ''
-This is the technique tha exploits the weakness.
+This is the technique that exploits the weakness.
 network based attacks
 Application attacks
 ''
@@ -51,7 +51,7 @@ This is an e-mail based scam
 ''
 Vishing
 ''
-This is a Voice Over Ip attack. People call in over these lines and request money for an injured relative... and any other way thet can play on your heart strings or urgency.
+This is a Voice Over Ip attack. People call in over these lines and request money for an injured relative... and any other way they can play on your heart strings or urgency.
 ''
 Smishing
 ''
@@ -96,12 +96,13 @@ Malware
 Watering hole attack
 ''
 This is DNS poisoning but the site to be spoofed is decided on whatever the most popular website all of the employees go to as a group.
-Like employee login page. Facebook, twitter... Credential harvesting
+Like employee login page. Facebook, twitter... 
+Credential harvesting
 ''
 
 Usually starts with reconnaissance
 
-Determine what website a target group frequent
+Determine what website a target group frequents
 
 
 Inject malicious code into the website
@@ -130,7 +131,9 @@ Scraping usernames and password from a website clone (Familiarity)
 
 Typo squatting
 ''
-This is where people purchase domains that are close to an actual domain. So if someone accidentally typed gooogle.com they would be sent to a page that looked just like google and when you go to log in your creds are harvested by the malicious website. and then the user is usually redirected to the actually site google.com after the credentials are scraped.
+This is where people purchase domains that are close to an actual domain. 
+So if someone accidentally typed gooogle.com they would be sent to a page that looked just like google and when you go to log in your creds are harvested by the malicious website.
+and then the user is usually redirected to the actually site google.com after the credentials are scraped.
 
 ''
 
