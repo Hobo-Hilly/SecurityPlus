@@ -39,21 +39,20 @@ End point negotiation types
     DHE (Diffie- Hellman encryption standard)
 
     ECC(Elliptical Curve Cryptology)
-     Anytime you're using ECC, whatever it's attached to. What it says is you can reduce the key link size,to use less processing power, but still have strong security
+     Anytime you're using ECC, whatever it's attached to. What it says is you can reduce the key length size,to use less processing power, but still have strong security
 
     ECDHE(Elliptic Curve Diffie-Hellman Phemeral)
 
-    Ephemeral just means that the keys are gonna change. Again, the session keys are gonna rotate. Again, the concept of an ephemeral key means that you have it, you captured it, that's fine. But once you've captured is useless to now. It's only good for that one piece of data during that transmission. A
+    Ephemeral just means that the keys are gonna change. Again, the session keys are gonna rotate. Again, the concept of an ephemeral key means that you have it, you captured it, that's fine. But once you've captured it's useless to now. It's only good for that one piece of data during that transmission.
     
 DH Groups
 
-Hight the Number the Stronger it is
-
+The higher the Number the Stronger it is
 
 FYI: This whole process of Diffie-Hellman and the asymmetric key encryption actually started as a way to verify proof, if you will, code that was running our space shuttles during the NASA programs
 
 * Key Stretching
-- So key stretching I'd like you to think of it is a key "strengthening"
+- So key stretching I'd like you to think of it as a key "strengthening"
 - This is really gonna be done against passwords
 
 - Increase the password Hash Size
@@ -68,9 +67,9 @@ Types
   - PBKDF2 (Paasword-Based Key Dereivation Function)
 EX: This is what a hash might look like before BCRYPT and AFTER
 
-dac175ed4db3c7c5b34f936e8a5c6daf
+BEFORE: dac175ed4db3c7c5b34f936e8a5c6daf
 
-$2a$10$WFXwqkiM.lDoa6uFgFFQkOLR0dPECEXJ4gvGhxccs6.1ADgxkMqhi
+AFTER:  $2a$10$WFXwqkiM.lDoa6uFgFFQkOLR0dPECEXJ4gvGhxccs6.1ADgxkMqhi
 
 Break Down
 
@@ -87,11 +86,11 @@ FYI: TPMS (Trusted Platform Module)
 
 - If the module gets tampered with in anyway. That little TPM says, somebody's trying to tamper with me and shreds all the keys so that nobody can gain access to the information that those keys protect.
 
-FYI: If something that's been encrypted with it, you no longer have access to. It's like basically removing the luck from the front door, but there's no handle there anymore
+FYI: If something that's been encrypted with it, you no longer have access to. It's like basically removing the lock from the front door, but there's no handle there anymore.
 
 Key Management
 
-- key management is just a process. I know, wait for it. Managing cryptographic keys
+- key management is just a process of managing cryptographic keys
 
 - Genrations
 
@@ -99,7 +98,12 @@ Key Management
 
 - If it is a public key cryptology, how do I get the public and private keys over to the endpoints? 
 
-Typically we can do that by issuance of certificates. Other things like usage? What do we use them for, right? For instance, if Dan spins up an Apache server or maybe a LAMP server, LAMP Stack, and he's out there on the internet. He's serving up web pages, right? I wanna be able to, or he wants me to be able to trust his website when I go to it, right? Well, he's got a server certificate up there for a web server that has those keys. And it defines that that is used for server authentication.
+Typically we can do that by issuance of certificates. Other things like usage? What do we use them for? 
+- For instance, if Dan spins up an Apache server or maybe a LAMP server, LAMP Stack
+
+NOTE: (LAMP is an acronym for the operating system, Linux; the web server, Apache; the database server, MySQL; and the programming language, PHP. All four of these technologies are open source, which means they are community maintained and freely available for anyone to use.) 
+
+He's out there on the internet. He's serving up web pages. I wanna be able to, or he wants me to be able to trust his website when I go to it. Well, he's got a server certificate up there for a web server that has those keys. And it defines that that is used for server authentication.
 
 - User Identification
 
@@ -108,11 +112,16 @@ Typically we can do that by issuance of certificates. Other things like usage? W
 - Renewal
 
 - Archive
-EX: When a person leaves your company, right, you don't you disable their account, you don't delete the account. 'cause if you delete the account, anything that that person had access to all the files that they created, all the files that they encrypte
+EX: When a person leaves your company, right, you don't you disable their account, you don't delete the account. 'cause if you delete the account, anything that that person had access to all the files that they created, all the files that they encrypted.
 
 - Recovery
 EX:
-So things like archival recovery as well. We have things like Ara's key recovery agents, right? If somebody if a key gets corrupted, how do we gain access to the encrypted information? Well, key recovery agent can. Facilitate with some of those, those actions as well
+So things like archival recovery as well. We have things like Ara's key recovery agents.
+
+# What is Ara?
+ARA is an automated Key Recovery Agent. An Auto Key Recovery capability has been fielded by DISA to permit holders of new (Common Access Card)CACs to retrieve encryption keys/certificates from previous cards to permit decryption of old email.
+
+ If a key gets corrupted, how do we gain access to the encrypted information? Well, key recovery agent can facilitate recovery with some of those actions as well
 
 - Destruction
      This is a term that's called crypto shredding
