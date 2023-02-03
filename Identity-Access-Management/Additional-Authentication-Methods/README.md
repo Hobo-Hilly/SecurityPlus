@@ -45,7 +45,7 @@ $Result    +     HMAC(hashing process)   =    2468731(The digits that make up a 
 
 
 
-TOTP
+TOTP (Time-based One Time Password)
 
 - This is a time based method
 - Used the Secret Key(Random Number)    +     TIMER(This is in place of the counter)  =  $Result2
