@@ -21,7 +21,8 @@ EX: Authenticator Apps, RSA(Fob), Secure ID,
 - Contactless (NFC Near Field Communication)
 No physical connection
 EX: Apple Pay, Google Pay, Apple Pay 
-its a contactless token
+its a contactless token. There is also the speed pass. The speed pass has a database that 
+is being maintained somewhere else other than where you are physically located.
 
 
 OTPs
