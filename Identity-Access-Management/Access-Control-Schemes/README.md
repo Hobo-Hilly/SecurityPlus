@@ -183,7 +183,7 @@ Examples
 Privilege Access Management (PAM)
 - This is for controlling and monitoring the user accounts we have in the directory
 - User with high-level permissions
-    Users with high-level permissions. We wanna know, who are the administrators on our network, and did an administrator create one of these backdoor-type accounts, and now are accessing it through a backdoor account? From the perspective of a system, that's an administrator accessing it. Should they have access, should they not have access, who created the account
+    Users with high-level permissions. We wanna know, who are the administrators on our network, and did an administrator create a backdoor-type account, and now are accessing the network from the acount. From the perspective of a system, that's an administrator accessing it. Should they have access, should they not have access, who created the account
 - So we know how many Admins how many managers etc ..are on the network and what their permissions are
 
 - How the permissions are used
