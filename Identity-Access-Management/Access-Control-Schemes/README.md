@@ -17,16 +17,16 @@ Access Control
 
 MAC (Mandatory Access Control)
 
-- Subjects
-    These are Identities we want to control access for
+- Subjects: These are Identities\Users\People we want to control access to the object(s) we are working on securing.
 
 - Objects
-    These are in reference to the resoures we want to control access to
+    Objects are in reference to the resoures we want to control access to.
+    EX:
     Resources could be as follows but not limited to
-    File
-    Service
-    Web Application
-    Network
+   a File
+   a Service
+   a Web Application
+   a Network
 
 Privileges
 
