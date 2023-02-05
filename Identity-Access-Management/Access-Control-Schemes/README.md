@@ -13,39 +13,35 @@ Access Control
 - So we've seen all of this before, the authentication process. We send over an authorization request. Then the server says, prove it.
  Then we prove, we are who we say we are. But now we, once we've been authenticated, we determine those privileges are what you should have access to.
 
-
-
-MAC (Mandatory Access Control)
-
 - Subjects: These are Identities\Users\People we want to control access to the object(s) we are working on securing.
 
-- Objects
-    Objects are in reference to the resoures we want to control access to.
-    EX:
-    Resources could be as follows but not limited to
-   a File
-   a Service
-   a Web Application
-   a Network
+- Objects: Objects are in reference to the resoures we want to control access to.
+  EX:
+  Resources could be as follows but not limited to
+  a File
+  a Service
+  a Web Application
+  a Network
 
 Privileges
 
+Mandatory Access Control: Mandatory access control models give the responsibility of access decisions to a security professional who is the only person with authority to set and manage permissions and access rights. This model is often used for businesses who protect sensitive data or property, and therefore require the highest levels of security status.
 
-Mandatory Access Control
-
-Access Control Models
-- Access control levels for the subject
+For 'subjects' we use "Access Levels"
     Secret Clearance
     Top Secret*** used in example
     Above Top Secret
 
-- Sensitivity Labels for the objects
+For 'objects' we use "Sensitivity Levels"
 
-- It's got secret clearance. Well, that secret clearance is the access level for the user or the subject in this case, but you also have a second designation that needs to match and that is the sensitivity label that's put over the object. 
+EX:
+- If a file is labled with a secret clearance. Well, that secret clearance is the access level for the user or the subject in this case, but you also have a second designation that needs to match and that is the sensitivity label that's put over the object. 
+
 - So for instance, in this case, this person has secret clearance. So they can only see things up to the secret clearance level on that object with that sensitivity label. But If it was top secret. They can't rise above what the sensitivity label is on the edge, the object itself
 
 
-DAC (Discetionary Access Control)
+DAC (Discetionary Access Control): The decisions on user permissions are taken at the discretion of one person, who may or may not have security expertise. While this limits the number of people who can edit user permissions, this model can also put an organization at risk because the decision maker may not be aware of the security implications of their decisions.  
+
 # How does it work?
 
 Let's take the same concept as above here. We've got our subject here and we've got an object with discretionary access control. Your subject is actually the owner of whatever objects they create
@@ -68,11 +64,11 @@ Set access level                        Access Control List (ACL)
 
                                         - Access control list or an access control entry an ACE, is an identity that's given a certain level of access to the resource by the owner itself. And that's all contained inside of the access control list that is set on the object itself.
 
-- Filesystem permissions uses DAC like all the time
+- Filesystem permissions use DAC like all the time
 
 - More specifically, let's talk about things like Windows permissions. NTFS permissions. Or even share permissions
 
-EX: How its used
+EX: How it's used
 - If I create a document and let's say Dan and I are on the same team, I want Dan to have maybe a certain level of access, maybe I don't want him to be able to change the permissions. Maybe I don't want him to be able to take over ownership of the documents. 
 
 - So I say, you know what, Don, I need your collaboration on this. So I give him a modify level permission, right. I want him to be able to manipulate the document. Maybe the other new person that joins our team I want them to kind of learn the ropes before they actually get to modify anything.
@@ -91,7 +87,9 @@ So use implicit denies if you're implementing something like discretionary acces
 ---------------------------------------------------------------------------------
 
 
-Role-based access control (RBAC)
+Role-based access control (RBAC): A role-based access control method or model, a security professional determines user permissions or user privileges based on the role of the employee. This could be their position or title within the company, or the type of employment status, such as differentiating between a temporary employee and full-time staff.
+
+
 - But what we have in role based access control is typically pretty Predefined organizational roles that are set by your organization. Before it, let's say an employee even joins before somebody joins your team.
 
 # How Does it work?
@@ -104,7 +102,7 @@ EX:
 
 
 
-Rule-based access control (RBAC)
+Rule-based access control (RBAC): The rule-based model, a security professional or system administrator sets access management rules that can allow or deny user access to specific areas, regardless of an employee’s other permissions. 
 
 # How does it work?
 EX:
@@ -143,7 +141,7 @@ FYI: By default, all firewalls, basically any traffic that isn't explicitly allo
 FYI: Yeah, and you gotta be careful with rule-based, because the rule order can come into play as well. You put the rules in the wrong order, and things don't work right, and it just gets weird. Take his ICMP versus the gateway. If I say, all traffic from this network is allowed, and then you also have, ICMP is not allowed? If I put those in the wrong order, even if it comes from that network, it'll still be disallowed. There's your problem, right, so be careful with those
 
 
-Attribute-based access control (ABAC)
+Attribute-based access control (ABAC): Attribute-based access control, also known as policy-based control, evaluates the attributes or characteristics of employees, rather than roles, to determine access. An employee that doesn’t present attributes set by the security administrator is denied access.  
 
 # How does it work?
 EX: 
