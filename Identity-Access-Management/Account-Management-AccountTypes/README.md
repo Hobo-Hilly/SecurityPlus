@@ -61,7 +61,7 @@ Shared Accounts
 
 - non repudiation
 
-- Confidentiality, integrity and availability. But the fourth one here, there is a fourth one here, and it's kinda a cousin to the CIA triad. That's non repudiation. And what that means is that if you remember from like IPsec, our IPsec shows, I wanna make sure that any action that happens, right? Can stay associated with the person or the entity in this case, a service account if we're talking about that. Stays associated with the person that did it.
+- Confidentiality, integrity and availability. But the fourth one here, there is a fourth one here, and it's kinda a cousin to the CIA triad. That's non repudiation. And what that means is that if you remember from like IPsec, our IPsec shows, I wanna make sure that any action that happens. Can stay associated with the person or the entity in this case, a service account if we're talking about that. Stays associated with the person that did it.
 
 EX: Companies will have one account that 50 people(multiple people) use so if the account is ever flagged for suspicious activity you have no idea who did it
 
