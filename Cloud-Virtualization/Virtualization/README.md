@@ -82,21 +82,19 @@ Hypervisors at a glance
 |                                                                                         |
 
 |                                                                                         |
-| APPLE             LINUX               WINDOWNS        Operating system                  |    4. OS we want to spin up and work with 
+| APPLE             LINUX               WINDOWNS        Operating system                  |    4. OS we want to spin up/work with 
 |                                                                                         |
 
 
 | CPU     /     MEMORY(RAM)     /      Storage(SSD)   /      NIC(Network Interface Card)  |    5. Host machines actual resources
 
 
-=======================================================================================================================================
+===============================================================================================================================
 
 There is a lot of communication that's going on, right? So this hypervisor is sitting on top of the operating system and the operating system is controlling below it, all of the hardware. So there's a lot of communication that has to go on for this type of hypervisor to work and that's why this isn't a scalable solution
 
 
 It is perfect for testing stuff that's what we do to test our machines out and test technologies 
-
-
 
 
 Virtual Network Adapters ( AKA Virtual NICs)
@@ -112,7 +110,7 @@ So basically within the host machine, you have your guests right?. And our guest
 *             *    # # # # # # # # # # 
 * * * * * * * *                                       Virtual NIC-4           Guest(VM4)
 
-======================================================================================================================================
+===============================================================================================================================
 FYI: Inside of that host machine when these computer these guest machines wanna talk again they have to follow the same rules of TCP/IP.
 
 
@@ -153,9 +151,9 @@ Virtual Networks
 | VNIC-1|    <---------->    | VNIC-2 |   <------------>   | VNIC-3|    <---------->    | VNIC-4|
                  SUCCESS                        COMMS                   Amoungst themselves but NO WHERE ELSE
 
-================================================================================================================================
+===============================================================================================================================
 
-- This first switch if they only can talk between each other that's more of an internal switch and that's where all communications between the VMs you get true what's known as isolation. 
+- This first switch if they only can talk between each other that's more of an internal switch and that's where all communications between the VMs you get through what's known as isolation. 
 
 
 VM to Host
@@ -204,7 +202,7 @@ EX:
 | VM-1  |                    | VM-2   |                    | VM-3  |                    |  VM-4 |
 | VNIC-1|    <---------->    | VNIC-2 |   <------------>   | VNIC-3|    <---------->    | VNIC-4|
                  SUCCESS                        COMMS           Between the Virtual machines AND the HOST Machine AND The LAN
-=====================================================================================================================================
+===============================================================================================================================
 
 
 Network Functions Virtualization (NFV)
