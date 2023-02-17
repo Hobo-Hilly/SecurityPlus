@@ -1,4 +1,4 @@
-I was/am trying different note taking styles. So I my bad if you get sea sick here.
+I was/am trying different note taking styles. So my bad if you get sea sick here.
 
 Network reconnaissance and discovery
 
@@ -91,12 +91,12 @@ Cuckoo
 
 ipconfig:
 
-- ifconfig tells you information about the network interfaces, you can see things like your MAC addresses, if you will, if the MTU, as well as, IP address, a lot of good information. You can see the link local here, IPv6 address. 
+- ifconfig tells you information about the network interfaces, you can see things like your MAC addresses, the MTU, as well as, IP address, a lot of good information. You can see the link local here, IPv6 address. 
 
 
-EX: This is an example the instructor gave in class on how this fits into the grand scheme of things. At least if your pentesting. Or doing network admin stuff i guess lol ; 
+EX: This is an example the instructor gave in class on how this fits into the grand scheme of things. At least if your pentesting. Or doing network admin stuff; 
 
-- Moving into ideas like DNS, I wanna look at what machines are alive, what what do I even have going on? I can use ping and sweep through the network, find live hosts. Then I'm gonna jump into something like nmap here to get a more of the, okay, now I know what hosts are alive. 
+- Moving into ideas like DNS, I wanna look at what machines are alive, what do I even have going on? I can use ping and sweep through the network, find live hosts. Then I'm gonna jump into something like nmap here to get a more of the, okay, now I know what hosts are alive. 
 
 - I could have used nmap to do that, as well, that's what Wes has said. Now, I wanna learn more about these machines. Okay, I've got a group of Windows machines, I've got a group of Linux machines, a couple of Mac boxes, it looks like maybe I have some printers. 
 
@@ -133,6 +133,6 @@ STATUS: You can see that Port 53 is open. Now, I don't need the service to tell 
 
 And the reason I've done that is because Port 88 kerberos, that is the authentication protocol by default for an active directory domain. And the fact that it's running DNS, tells me that it is a domain controller cuz it's got an integrated or active directory DNS zone. So that it can handle name resolution, basically, like looking locally.
 
-We can see the LDAP. That should be a telltale sign that it's running that LDAP database, right? Being a domain server.
+We can see the LDAP. That should be a telltale sign that it's running that LDAP database. Being a domain server.
 
 
