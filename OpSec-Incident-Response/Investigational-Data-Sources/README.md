@@ -5,7 +5,7 @@ EXPLANATION:
 So SIEMs are really where, you know, a good place to start when it comes to where are some of them data Sources? >> Yeah. If you are implementing a SIEM solution in your environment. 
 Wes is absolutely right. It's going to be pulling all that information from all those different endpoints and saying, "Hey, I think this is something we've gotten alerts that are set up and generated to do x, y or z IDS and IPS alerts can go in there as well. But as you can see that can still be a bit of a daunting task, because there are a lot of log files that could be involved."
 
-You see, what this highlighting here for us in the studio on our network 3.1 million events. This is still a lot of data to process which is where these next frameworks come into play. 
+You see, what this is highlighting here for us in the studio on our network 3.1 million events. This is still a lot of data to process which is where these next frameworks come into play. 
 
 Netflow - Cisco Propriatary
 
@@ -24,7 +24,7 @@ So from a 2019 Domain controller/Windows 10 machine
 1. Right click on the start menu
 2. Event Viewer
 3. Select Windows Logs
-    - Application (click on the application logs. It generates the information in the number of events,)
+    - Application (click on the application logs. It generates the information and the number of events,)
 
 There is a Filter on the right side of the Event Viewer
 4. Select 'Filter Current Log'
@@ -41,7 +41,7 @@ STATUS: I wanna isolate down maybe at the certain time something happened. And t
 1. Select security logs from the windows logs drop down menu. Dble click
 STATUS:
 We can audit successful log ons here.
-For instance, you can see the Credential Manager where the passwords are. What is managing those way those passwords that we log on,
+For instance, you can see the Credential Manager where the passwords are. What is managing those passwords that we log on with
 
 - We have those system logs and security logs in Windows for authentication. 
 
