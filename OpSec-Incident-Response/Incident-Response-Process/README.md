@@ -4,7 +4,7 @@ Today we're gonna be talking about the incident response process. let's start wi
 
 # What qualifies as an incident?
 Generically, it's just a violation of some kinda security policy or procedure
-- an event is raised to indicate a happening on the network or in Entuity.
+- an event is raised to indicate a happening on the network or in Entity.
 - an incident indicates the persistence of an event, and can be called, amended and closed by more than one type of event.
 
 Security Event Vs. Security Incident
@@ -35,7 +35,7 @@ STEPS:
 * Analysis of events/ event logs 
 * Components for Identification
     Monitoring
-    Detecting SIEM
+    Detecting SIEM (Security information and event management)
     Alerting IOCs (Indicators of Compromise)
     Logging    (That's one of the reasons we log events, your operating systems, your network devices. SIEM, we know, collects all of it and things like syslog, if you will. We're monitoring everything that happens, in order to, maybe to detect if something is actually happening.)
 
