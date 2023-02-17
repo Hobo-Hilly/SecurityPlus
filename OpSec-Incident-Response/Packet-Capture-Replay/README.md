@@ -10,7 +10,6 @@ And we basically start to capture the traffic that is moving from point A to poi
 
 
 # How does it work?
-
 1. Determine the machine that you will work from
 I am using my laptop
 2. Identify the interface used to capture files
