@@ -26,7 +26,7 @@ SEAndroid ( security Enhanced Android)
 - Uses SELinux
 - Implements implicit deny
 - Application sandboxing
-SE android is the fact that it does application sand boxing, alright. Remember what Sand boxing is, right? Sand boxing isn't quarantining, Sand boxing says we're gonna give this application its own isolated space to operate in, so that if it causes any problems,
+SE android is the fact that it does application sand boxing. Remember what Sand boxing is; sand boxing isn't quarantining, Sand boxing says we're gonna give this application its own isolated space to operate in, so that if it causes any problems,
 - Two Modes
 
     Permissive mode: Now permissive says, hey I'm gonna warn you Dan, you shouldn't have done that, you shouldn't have done that, but I'm gonna go ahead and let you do it anyways
