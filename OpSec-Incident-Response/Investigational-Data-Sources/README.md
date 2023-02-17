@@ -2,16 +2,18 @@
 SIEM dashboards (Security Incedent Event Management Systems)
 EXPLANATION:
 
-So Sims are really where, you know, a good place to start when it comes to where are some of them data Sources? >> Yeah. If you are implementing a SIM solution in your environment, West is absolutely right. It's going to be pulling all that information from all those. Different endpoints and saying, Hey, I think this is something we've gotten alerts that are set up and generated to do x, y or z IDs and IPS alerts can go in there as well. But as you can see that can still be a bit of a daunting task, because there are a lot of log files that could be involved.
+So SIEMs are really where, you know, a good place to start when it comes to where are some of them data Sources? >> Yeah. If you are implementing a SIEM solution in your environment. 
+Wes is absolutely right. It's going to be pulling all that information from all those different endpoints and saying, "Hey, I think this is something we've gotten alerts that are set up and generated to do x, y or z IDS and IPS alerts can go in there as well. But as you can see that can still be a bit of a daunting task, because there are a lot of log files that could be involved."
 
-You see, what's this highlighting that for us why what was that 3.1 million. This is still a lot of data to process which is where these next frameworks come into play. 
+You see, what this highlighting here for us in the studio on our network 3.1 million events. This is still a lot of data to process which is where these next frameworks come into play. 
 
 Netflow - Cisco Propriatary
 
 IPfix - IETF protocol (RFC 7011/5101 )
-- it serves for a means of transmitting your traffic flow information over the network
+- It serves for a means of transmitting your traffic flow information over the network.
+
 Protocol analyzers
-- If we want to get an idea of how the information is passing through the various systems on our networks, right, are we making API calls with applications back to databases right? What is going on on our network? And the reason I say this is because You can also use things like bandwidth monitors as well.
+- If we want to get an idea of how the information is passing through the various systems on our networks. Things like are we making API calls with applications back to databases? What is going on within our network? And the reason I say this is because You can also use things like bandwidth monitors as well.
 
 
 tcpdump
@@ -39,11 +41,11 @@ STATUS: I wanna isolate down maybe at the certain time something happened. And t
 1. Select security logs from the windows logs drop down menu. Dble click
 STATUS:
 We can audit successful log ons here.
-For instance, you can see the critical or the credit manager, Credential Manager if I could say that right where the where the passwords, right? What is managing those way those passwords that we log on,
+For instance, you can see the Credential Manager where the passwords are. What is managing those way those passwords that we log on,
 
 - We have those system logs and security logs in Windows for authentication. 
 
-# What if we want look at DNS/ Active Directory Web server/ Directory Service
+# What if we want to look at DNS/ Active Directory Web server/ Directory Services
 1. Expand Applications and Services Log
 2. select your desired resource to audit
 
@@ -58,10 +60,10 @@ Log files (Linux)
 
 Network logs
  journalctl -u NetworkManager
- journalctl -u NetworkManager |grep dns
+ journalctl -u NetworkManager | grep dns
 - System Logs
-journalctl| grep systemd
-journalctl| grep systemd |tail -n 50
+journalctl | grep systemd
+journalctl | grep systemd | tail -n 50
 - Authentication
     less auth.log.1
     grep session auth.log.1
