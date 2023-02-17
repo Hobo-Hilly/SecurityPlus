@@ -1,5 +1,7 @@
 # Summary
-what is cloud in general, right? That's those computing servers, computing infrastructure, somebody else's network. And we pay a subscription for those services. Well, now, we gotta define what are the actual services that are available. 
+What is cloud in general? That's those computing servers, computing infrastructure, somebody else's network. And we pay a subscription for those services. Well, now, we gotta define what are the actual services that are available. 
+
+
 =============================================================================================================
 
 SaaS (Software As A Service)
