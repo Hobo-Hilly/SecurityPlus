@@ -44,13 +44,13 @@ NOTE:grep is a powerful command helping us manipulate data. Does not work in win
 11. Stop capture and view file output
 12. cat -n test-cap.txt
 13. grep ftp-data test-cap.txt
-14. grep ftp-data test-cap.txt |head -n 5     # First 5 entrys in the file
-15. grep ftp-data test-cap.txt |tail -n 5     # Last 5 files in the file
+14. grep ftp-data test-cap.txt | head -n 5     # First 5 entrys in the file
+15. grep ftp-data test-cap.txt | tail -n 5     # Last 5 files in the file
 
 16. Create a script to review capture file
 17. vi capsearch.sh
 
-18. grep ftp-data test-cap.txt |tail -n 5
+18. grep ftp-data test-cap.txt | tail -n 5
 Make script executable
 
 19. sudo chmod +x capsearch.sh
@@ -74,7 +74,7 @@ Stop capture and open PCAP file in Wireshark
 24. Replaying packets to the network
 
 # how does this work?
-lock this down and make this a secure FTP server, not the clear plain text one. >> Yeah, because this stuff crossing the wire, us being able to see that, well, think about if we were an attacker and they were able to see this information. Opens up to what we call replay type of attacks. This could be just reusing this password and username. Maybe it's a session token, you grab that out of the air and now you're using that. Pass the has kind of attacks as well.
+lock this down and make this a secure FTP server, not the clear plain text one. >> Yeah, because this stuff crossing the wire, us being able to see that, well, think about if we were an attacker and they were able to see this information. Opens up to what we call replay type of attacks. This could be just reusing this password and username. Maybe it's a session token, you grab that out of the air and now you're using that. Pass the hash kind of attacks as well.
 
 25. $ sudo tcpreplay -i eth1 test-cap.pcap           # Test file from earlier example
 
