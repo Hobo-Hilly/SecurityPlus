@@ -1,15 +1,15 @@
 
-# What is the need for SIEM?
+# What is the need for SIEM? Security Information and Event Management (SIEM)
 
 EX:
 If you think about Syslog, we're aggregating Syslog information system log information to a centralized location, but then we still gotta make some sense out of it. So we can do that, we can aggregate it. But that's just a single platform. 
 
 
-Immense amount of event-related data
+Immense amounts of event-related data
 Firewalls, IDS, IPS solutions
 Log, aggregate, normalize, review
 
-We need a strategic and methodic way to capture this information
+We need a strategic and methodical way to capture this information.
 
 Security Information and Event Management (SIEM)
 - The components inside of a SIEM, it is a combination of security, information management as well as security event management.
@@ -19,7 +19,7 @@ Security Information Management
 # What does it do?
 EX:
 We've got a lot of components within our networks, which equals a lot of data inputs across the network.
-These can be things like firewalls, servers, anti malware software, a Syslog Server. Maybe you've got multiple Syslog servers and they're geographically dispersed. We want to collect ALL of that information  
+These can be things like firewalls, servers, anti malware software, a Syslog Server. Maybe you've got multiple Syslog servers and they're geographically dispersed. We want to collect ALL of that information.  
 
 - The SIM, allows us to log, store, aggregate, and collect that information. 
 **NOTE: The complexities behind one of these systems goes a lot farther than this, but these are the basic concepts of what that security information management involves. 
@@ -71,9 +71,9 @@ The SIEM is a very manual type process. Yes, we're monitoring everything. But th
 
 Security Orchestration, Automation, and Response (SOAR)
 - Well, basically what a SOAR system does is it integrates with the SIEM, and it provides an automated response
-- We can use a combination of playbooks and run books that help us to automate that response process, And it streamlines our response process.
+- We can use a combination of playbooks and run plays that help us to automate that response process, And it streamlines our response process.
 # How do they work? 
-- These are typically used in conjunction with a SEIM. Bringing that SIEM to the next level, so you don't have to rely on just the manual process, especially when you have tens of thousands of events that could happen. You can add one of those running playbooks to it, you can automate the process and then you get that faster streamline response. 
+- These are typically used in conjunction with a SIEM. Bringing that SIEM to the next level, so you don't have to rely on just the manual process, especially when you have tens of thousands of events that could happen. You can add one of those running playbooks to it, you can automate the process and then you get that faster streamline response. 
 
 Security orchestration, automation, and response (SOAR)
 
