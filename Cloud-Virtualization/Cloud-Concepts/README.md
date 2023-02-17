@@ -1,6 +1,6 @@
 # Summary 
 EX:
-Picture this ...
+Picture this ..
 Now, I know inside of your home right now you've probably are looking at your computer. Maybe you see some cables, whether you actually installed or not, doesn't matter. But then there's a certain point where that cable leaves your house, goes underground, wherever it goes, typically, underground, and hits a telephone pole, or what stays underground, and it disappears. 
 
 Do you really know where all of that infrastructure is? Do you really know where inside of this Internet thing we call, that infrastructure is? Well, you've been using cloud based technologies and you probably didn't realize it for a very long time. And I want you to think of the Internet, all right? 
