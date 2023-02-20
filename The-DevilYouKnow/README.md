@@ -1,0 +1,3 @@
+So this file is dedicated to the only real useful quotes involving Luci. "The Devil is in the Details" and "Better the Devil you know than the devil you don't." 
+
+This is a list of Details and Definitions I believe to be useful is quick reference style and also useful for a study guide. I am going to type these all by hand in order to study and create at the same time. Before you ask, yes this is absolutely banana's and I am a bit mad for doing this. BUT... Once it's done I won't have to do it again. At least for this class.  
