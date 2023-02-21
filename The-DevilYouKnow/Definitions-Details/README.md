@@ -325,6 +325,79 @@ A distributed denial-of-service (DDoS) attack uses multiple sending devices to t
 RESOURCE: https://www.trellix.com/en-us/security-awareness/cybersecurity/what-is-a-zero-day-exploit.html
 
 ---------------------------------------------------------------------------------------
+OBJECTIVE:
+Given a scenario, implement secure network designs
 
+SUB-OBJECTIVE:
+Load Balancing
 
+NAC:
+Network Access Control is a method used to verify the health of a device before allowing connection to the network.
+
+VIRTUAL IP:
+The load balancer has a virtual IP address that the application is mapped to and the balancer distributes the work to the servers with different IP addresses.
+
+AFFINITY SCHEDULING:
+Affinity scheduling is used to assign work to the CPUs when multiple CPUs are used in a system. It sends all work for a specific job to the same processor when configured.
+
+NAT: 
+Network Address translation is a method used to convert private IP addresses to public addresses and vice versa.
+
+RESOURCE: https://www.evidian.com/products/high-availability-software-for-application-clustering/how-a-virtual-ip-address-works/
+
+--------------------------------------------------------------------------------------------------------
+
+OBJECTIVE:
+Compare and contrast different types of social engineering techniques
+
+SUB-OBJECTIVE:
+Social Engineering Principles and Influence Campaign
+
+DETAILS:
+The social engineering principles and their descriptions should be matched in the following manner:
+
+Authority – the attacker claims to have certain power, often by claiming to be an official representative
+
+Intimidation – the attacker frightens or bullies the personnel so that the information the attacker needs is revealed
+
+Consensus – the attacker attempts to trick personnel into releasing information by proving that it is fine to release the information based on the actions of others
+
+Scarcity – the attacker attempts to trick personnel based on people's tendency to place a higher value on resources that are not in great supply
+
+Urgency – the attacker makes the situation seem like an emergency
+
+Familiarity – the attacker tends to create a false sense of acquaintance with personnel by implying that the 
+attacker knows someone the personnel knows or works with
+
+Trust – the attacker gains the confidence or faith of the personnel
+
+RESOURCE: https://cyberkrafttraining.com/2021/01/21/social-engineering-principles/
+
+----------------------------------------------------------------------------------------------------
+
+OBJECTIVE:
+Explain the importance of policies to organizational security
+
+SUB-OBJECTIVE:
+User Training
+
+DETAILS:
+Security professionals must understand the purpose and usage of administrative controls. The administrative controls must be matched in the following manner:
+
+Separation of duties – Ensures that sensitive operations are divided among multiple users
+
+Auditing – Ensures that user actions are monitored
+
+AUP – Ensures that users understand the acceptable and unacceptable uses of organizational property, particularly computer and mobile devices
+
+NDA – Ensures that users understand that certain information must not be disclosed to outside parties
+
+Security awareness training – Ensures that users are conscious of the organizational security policies
+
+Job rotation – Ensures that roles are alternated between more than one person to prevent fraud.
+
+RESOURCE: https://en.wikipedia.org/wiki/Security_awareness
+https://flylib.com/books/en/1.34.1/operational_security.html
+
+-------------------------------------------------------------------------------------------
 
