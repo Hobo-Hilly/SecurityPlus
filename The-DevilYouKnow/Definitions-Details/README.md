@@ -259,4 +259,72 @@ Summarize the techniques used in security assessments
 SUB-OBJECTIVE:
 Vulnerability Scanning
 
+DETAIL:
+The active approach encompasses everything an organization does to foil system breaches, while the passive (or monitoring) approach entails all the ways the organization oversees system security.The passive approach allows security personnel to monitor which operating systems are in use; what is being sent to, from and within the system; which services are available; and where parts of the system may be vulnerable to security threats. The active approach, on the other hand, offers much information about system and application vulnerabilities.
+
+ACTIVE:
+To perform a more in-depth analysis than other scan types, you would perform an active scan. An active scan is also considered an intrusive scan as it usually provides more meaningful results on the scan.
+
+PASSIVE:
+A passive scan impacts the hosts and network less than other scan types. A passive scan is a non-intrusive scan,
+meaning you are probing for the weaknesses but not exploiting them.
+
+CREDENTIALED SCAN:
+To include the appropriate permissions for the different data types, you should perform a credentialed scan. A noncredentialed scan does operate within the context of a user account. The appropriate permissions may be needed to be able to access all the data and applications on devices. Permissions and access to the entire hosts are provided with a credentialed scan.
+
+AGENT-BASED SCAN:
+Although not always possible, limiting a scan to a particular operating system can be done with an agent-based scan. With an agent-based scan, agents are installed on devices. These agents then send scan reports back to a central agent.
+
+SERVER-BASED SCAN: 
+In a server-based scan, the scanner runs from a server that then scans all the devices. Agent-based scanning is
+considered better than server-based scanning because it has less impact on the network. But an agent-based scan
+usually has more of an impact on the device on which the agent is installed.
+
 RESOURCE: https://www.computerworld.com/article/2569669/two-sides-of-vulnerability-scanning.html
+
+---------------------------------------------------------------------------------------------------
+
+OBJECTIVE:
+Summarize the techniques used in security assessments
+
+SUB-OBJECTIVE:
+Application Developement Processes
+
+BINARY FILE:
+In application development, the binary executable contains low-level instructions that target a particular computer system or platform. Generally, a binary file is a non-text file, that can only be read and interpreted by the computer. Binary files are a collection of bytes. When binary files are opened, they are processed byte by byte. The bytes in a binary file can represent executable programs, sometimes referred to as ‘binaries’, but they can also represent media, such as pictures or sound.
+
+SOURCE FILE:
+In application development, a source file contains human-readable programming code that will be later compiled or directly interpreted by a system to perform the required actions.
+
+SCRIPT FILE:
+A script file is a source file that is directly interpreted by the target system, rather than requiring an additional compilation step before running.
+
+FRAMEWORK:
+A framework is a modular component that provides additional functionality for an application or developers of that application.
+
+RESOURCE:
+https://careerkarma.com/blog/what-is-binary-file/
+
+-----------------------------------------------------------------------------------
+
+OBJECTIVE:
+Explain the security concerns associated with various types of vulnerabilities
+
+SUB-OBJECTIVE:
+Platform Vulnerabilities
+
+ZERO-DAY VULNERABILITY:
+Zero-day vulnerabilities are often unknown or known only to an attacker who is able to exploit that vulnerability. Patches are not readily available until the manufacturer can develop a solution.
+
+SQL INJECTION:
+A SQL injection describes an input validation issue in the front-end of an application that allows attackers to directly manipulate the underlying data source using structured query language (SQL).
+
+DDoS:
+A distributed denial-of-service (DDoS) attack uses multiple sending devices to take a single host or group of hosts offline. The sending devices are typically a group of compromised devices, known as a botnet, that are controlled by central Command and Control (C&C) server.
+
+RESOURCE: https://www.trellix.com/en-us/security-awareness/cybersecurity/what-is-a-zero-day-exploit.html
+
+---------------------------------------------------------------------------------------
+
+
+
