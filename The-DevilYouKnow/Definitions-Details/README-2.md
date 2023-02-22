@@ -53,7 +53,7 @@ Sub-Objective:
 Blockers, Cages and Data Destruction
 
 Faraday cage:
-A faraday cage can prevent the leaking of electromagnetic transmissions.
+A faraday cage can prevent the leaking of electromagnetic transmissions. A Faraday cage is a security measure that protects against eavesdropping or signals leaving the room. The "cage" is wire mesh or other conductive material woven together to protect the room. 
 
 Air gap:
 Creating an air gap is the process of disconnecting the device from any network.
@@ -116,7 +116,60 @@ Subject Alternative Name (SAN) is a field in the certificate definition that all
 
 RESOURCE: https://www.globalsign.com/en/blog/what-is-certificate-based-authentication
 
+-----------------------------------------------------------------------------------------------
 
+Objective:
+Given a scenario, implement host or application security solutions
+
+Sub-Objective:
+Endpoint Protection
+
+Air gap:
+Air gapping in network security means that you physically separate secure networks and equipment from insecure
+networks and equipment. For example, you would not want to have your development or R&D platforms on the same
+network as your production equipment. Data cannot move between air gapped and insecure systems unless it is
+physically transferred on media, like a disk or USB stick. Air gapping is an important security concept for IoT devices as well.
+
+Sandboxing:
+Sandboxing is developing an application outside of the production environment. Sandboxing can also be useful to test a legacy operating system that may not have security patches. Virtual machines are often used to create the sandbox. Memory allocation issues may be discovered during sandbox testing but are not directly a part of the sandbox functionality.
+
+Tokens and Cards:
+Tokens and cards include items that a user must possess in order to gain access to the building, room, or network resource. They include one-time password that authenticates the user and smart cards. They are an integral part of authentication, but do not provide internetwork protection.
+
+
+RESOURCE: https://en.wikipedia.org/wiki/Air_gap_(networking) , https://en.wikipedia.org/wiki/Sandbox_(computer_security)
+
+----------------------------------------------------------------------------------------------
+
+Objective:
+Given a scenario, analyze potential indicators associated with network attacks
+
+Sub-Objective:
+Network Service Attacks
+
+Content Inspection:
+The purpose of content inspection is to search for malicious code or suspicious behavior.
+
+Load Balancing:
+The purpose of load balancing is to distribute the workload across multiple devices. Often DNS servers are load
+balanced to ensure that DNS clients can obtain DNS information as needed. Other services are load balanced as well. Load balancers optimize and distribute data workloads across multiple computers or networks.
+
+Internet or Web proxy:
+The purpose of an Internet or Web proxy is to filter and forward Web content anonymously.
+
+Spam Filter:
+The purpose of a spam filter is to identify and block unwanted messages. Spam filters should be configured to prevent employees from receiving unsolicited e-mail messages.
+
+All-in-One Security Appliance:
+Another type of hardware that is similar to a spam filter is an all-in-one security appliance. This device filters all types of malicious, wasteful, or otherwise unwanted traffic.
+
+Detail:
+Many all-in-one security appliances include a component that performs content inspection and malware inspection.
+These appliances usually also include a URL filter feature that allows administrators to block and allow certain
+Websites. For example, the URL filter in an all-in-one security appliance could be configured to restrict access to peerto-peer file sharing Websites
+
+NETWORK SECURITY PLAYBOOK
+RESOURCE: https://media.wiley.com/product_data/excerpt/79/11180611/1118061179-83.pdf 
 
 
 
