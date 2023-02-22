@@ -400,4 +400,53 @@ RESOURCE: https://en.wikipedia.org/wiki/Security_awareness
 https://flylib.com/books/en/1.34.1/operational_security.html
 
 -------------------------------------------------------------------------------------------
+OBJECTIVE:
+Given a scenario, analyze potential indicators associated with application attacks
+SUB-OBJECTIVE:
+Injection Attacks
 
+Stored procedures:
+Stored procedures are a series of SQL statements that are executed as a group, and are similar to scripts. Using
+properly written stored procedures protects the database from damage caused by poorly written SQL statements and
+SQL injection attacks.
+
+DETAIL:
+The purpose of an SQL injection attack is to read sensitive data from the database, modify the data, execute
+administrative operations on the database, recover the content of a given file, and even issue commands to the
+operating system.
+
+OBFUSCATION and CAMOUFLAGE:
+Obfuscation and camouflage are closely related. Obfuscation means to make something difficult to understand, and
+camouflage means to hide something among its surroundings and make it more difficult to detect. The purpose of both is to make it more difficult for someone to tamper with code or reverse engineer the code, but they will not protect against injection attacks.
+
+ERROR HANDLING:
+Error handling means that every input is validated against a range of acceptable values. If the input does not match that range of values, that input is rejected, and an error message is generated. Program crashes occur when an invalid input produces unexpected results. SQL injection attacks usually do not result in errors, so error handling would not fix them.
+
+PROVISIONING:
+Provisioning and deprovisioning allocate resources based on demand for those resources. They will not protect against injection attacks.
+
+DETAIL:
+Other secure coding techniques and issues include encryption, code signing, code reuse, dead code, server-side
+versus client-side execution and validation, memory management, third-party SDKs, and data exposure.
+
+Encryption should be used in software development, as well as network traffic, to protect data being stored or
+transmitted.
+
+CODE SIGNING:
+Code signing embeds a digital signature into a piece of software, and is often used with device drivers. Validating the signature would ensure that you are installing software that is from the vendor.
+
+CODE REUSE/ DEAD CODE:
+Code reuse and dead code are closely related. Attackers can reuse code that was developed for another purpose. In some cases, the code reused is no longer valid or outdated. If the code is outdated, it is called dead code.
+
+SERVER-SIDE VS CLIENT-SIDE EXECUTION & VALIDATION:
+- Server-side execution and validation happens on the server when the data returns to the server
+- Client-side validation occurs on the browser on the client machine.
+The good thing about client-side validation is that it provides a quicker response and does not generate a lot of overhead on the server. With that said, however, the browser needs to monitor for malicious code.
+
+MEMORY MANAGEMENT:
+Memory management watches for things like memory leaks. Memory leaks can be caused by a programmer failing to
+free up memory once the process using that memory has been completed. C and C++ are particularly prone to memory
+leaks. Use of third-party libraries and Software Development Kits (SDKs), while common, present security vulnerabilities.
+A flaw in an SDK can result in issues in every application that the SDK was used to develop. Data exposure occurs when there are not sufficient safeguards on a database. Failure to protect your database can result in data hijacking and injection attacks.
+
+RESOURCE: https://en.wikipedia.org/wiki/Stored_procedure
