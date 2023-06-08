@@ -1,3 +1,7 @@
+### This is SECTION 1.1 in the EXAM 
+
+
+
 Description: In this episode, we discuss the methods used by bad actors to deceptively manipulate individuals into divulging confidential information through social engineering. We will compare and contrast different types of social engineering techniques like phishing, whaling, spam, spear phishing and more.
 
 Principles of Security
@@ -88,10 +92,15 @@ Redirection to a bogus site
 
 
 DNS poisoning
-
+"
+DNS spoofing, also referred to as DNS cache poisoning, is a form of computer security hacking in which corrupt Domain Name System data is introduced into the DNS resolver's cache, causing the name server to return an incorrect result record, e.g. an IP address
+"
 
 
 Malware
+"
+Malware is any software intentionally designed to cause disruption to a computer, server, client, or computer network, leak private information, gain unauthorized access to information or systems, deprive access to information, or which unknowingly interferes with the user's computer security and privacy.
+"
 
 Watering hole attack
 ''
@@ -100,26 +109,20 @@ Like employee login page. Facebook, twitter...
 Credential harvesting
 ''
 
-Usually starts with reconnaissance
+How does it work?
+- Usually starts with reconnaissance
 
-Determine what website a target group frequents
-
-
-Inject malicious code into the website
-''
-
-''
+- Determine what website a target group frequents
 
 
-Targets get infected as they visit the website
-''
+- change the mapping on the DNS server to resolve the choice website to one other than intended 
 
-''
 
 
 Credential harvesting
 ''
-
+After a watering hole attack is set up or a Poisoning of a DNS cache...
+The End User is on the 
 ''
 
 
