@@ -9,18 +9,16 @@ if an attacker can perform an online attack against that remote RDP session, or 
 
 SSH is also a remote login that can be attacked
 
-BlueKeep and DejaBlue are two attacked the RDP protocol.
+BlueKeep and DejaBlue are two attackes that were used against the RDP protocol.
 
 CONS:
-- Online login attempts are usually limited to a certain amount of tries until a lock out threshold.
-    Which could take a certain amount of time to reset or could require a sys admin to hope into the system and reset the users account
-- Limited Bandwidth. If you are hammering the machine with a online login form you are going to make a ton of noise and you could accidentally Dos login server if the server being attacked has a small/limited amount of bandwidth to work with.
+- Online login attempts are usually limited to a certain amount of tries until a lock out threshold is hit.
+    Which could take a certain amount of time to reset or could require a sys admin to hop into the system and reset the users account
+- Limited Bandwidth. If you are hammering the machine on an online login form you are going to make a ton of noise and you could accidentally DOS(Denial of Service)  the login server. If the server being attacked has a small/limited amount of bandwidth to work with.
 - Wildly Detectable  
 
 ''
-
 Online attacks cover all REMOTE LOGINS 
-
 
 Offline Attacks
 # What are they?
